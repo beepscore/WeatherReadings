@@ -15,6 +15,9 @@
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		DE79595C10AB790D00416C7F /* BSGlobalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = DE79595B10AB790D00416C7F /* BSGlobalValues.m */; };
+		DEE90B2D10AB780A0026C995 /* LocationMO.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE90B2C10AB780A0026C995 /* LocationMO.m */; };
+		DEE90B3210AB78560026C995 /* ObservationMO.m in Sources */ = {isa = PBXBuildFile; fileRef = DEE90B3110AB78560026C995 /* ObservationMO.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,12 @@
 		7788DA0506752A1600599AAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		8D15AC360486D014006FF6A4 /* WeatherReadings-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "WeatherReadings-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* WeatherReadings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReadings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE79595A10AB790D00416C7F /* BSGlobalValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGlobalValues.h; sourceTree = "<group>"; };
+		DE79595B10AB790D00416C7F /* BSGlobalValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGlobalValues.m; sourceTree = "<group>"; };
+		DEE90B2B10AB780A0026C995 /* LocationMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMO.h; sourceTree = "<group>"; };
+		DEE90B2C10AB780A0026C995 /* LocationMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMO.m; sourceTree = "<group>"; };
+		DEE90B3010AB78560026C995 /* ObservationMO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObservationMO.h; sourceTree = "<group>"; };
+		DEE90B3110AB78560026C995 /* ObservationMO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObservationMO.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +98,14 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DE79595A10AB790D00416C7F /* BSGlobalValues.h */,
+				DE79595B10AB790D00416C7F /* BSGlobalValues.m */,
+				DEE90B2B10AB780A0026C995 /* LocationMO.h */,
+				DEE90B2C10AB780A0026C995 /* LocationMO.m */,
 				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
 				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
+				DEE90B3010AB78560026C995 /* ObservationMO.h */,
+				DEE90B3110AB78560026C995 /* ObservationMO.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -193,6 +208,9 @@
 				8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */,
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				775BDEF1067A8BF0009058FE /* MyDocument.xcdatamodel in Sources */,
+				DEE90B2D10AB780A0026C995 /* LocationMO.m in Sources */,
+				DEE90B3210AB78560026C995 /* ObservationMO.m in Sources */,
+				DE79595C10AB790D00416C7F /* BSGlobalValues.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +291,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -286,6 +306,8 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;

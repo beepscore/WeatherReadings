@@ -3,8 +3,12 @@
 //  WeatherReadings
 //
 //  Created by Steve Baker on 11/11/09.
-//  Copyright Beepscore LLC 2009 . All rights reserved.
+//  Copyright Beepscore LLC 2009. All rights reserved.
 //
+//  UW CP-120 Certificate in iPhone and Cocoa Development
+//  Q1 Intro to Programming in Objective-C and the Cocoa Framework.
+//  Homework assignment 6
+
 
 #import <Cocoa/Cocoa.h>
 

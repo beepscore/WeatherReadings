@@ -15,6 +15,8 @@
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		DE73021010AB89D100623614 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = DE73020F10AB89D100623614 /* Location.m */; };
+		DE73021510AB8A2100623614 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE73021410AB8A2100623614 /* Observation.m */; };
 		DE79595C10AB790D00416C7F /* BSGlobalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = DE79595B10AB790D00416C7F /* BSGlobalValues.m */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,10 @@
 		7788DA0506752A1600599AAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		8D15AC360486D014006FF6A4 /* WeatherReadings-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "WeatherReadings-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* WeatherReadings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReadings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE73020E10AB89D100623614 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		DE73020F10AB89D100623614 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		DE73021310AB8A2100623614 /* Observation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observation.h; sourceTree = "<group>"; };
+		DE73021410AB8A2100623614 /* Observation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observation.m; sourceTree = "<group>"; };
 		DE79595A10AB790D00416C7F /* BSGlobalValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGlobalValues.h; sourceTree = "<group>"; };
 		DE79595B10AB790D00416C7F /* BSGlobalValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGlobalValues.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +139,10 @@
 		E1B74B1A0667B4A90069E3BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DE73021310AB8A2100623614 /* Observation.h */,
+				DE73021410AB8A2100623614 /* Observation.m */,
+				DE73020E10AB89D100623614 /* Location.h */,
+				DE73020F10AB89D100623614 /* Location.m */,
 				775BDEF0067A8BF0009058FE /* MyDocument.xcdatamodel */,
 			);
 			name = Models;
@@ -199,6 +209,8 @@
 				8D15AC320486D014006FF6A4 /* main.m in Sources */,
 				775BDEF1067A8BF0009058FE /* MyDocument.xcdatamodel in Sources */,
 				DE79595C10AB790D00416C7F /* BSGlobalValues.m in Sources */,
+				DE73021010AB89D100623614 /* Location.m in Sources */,
+				DE73021510AB8A2100623614 /* Observation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

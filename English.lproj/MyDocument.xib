@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="100460"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1690,7 +1690,7 @@
 																						<double key="NSMinWidth">30.533203125</double>
 																						<double key="NSMaxWidth">3.4028234663852886e+38</double>
 																						<object class="NSTableHeaderCell" key="NSHeaderCell">
-																							<int key="NSCellFlags">67239488</int>
+																							<int key="NSCellFlags">75628096</int>
 																							<int key="NSCellFlags2">2048</int>
 																							<string key="NSContents">Time</string>
 																							<reference key="NSSupport" ref="26"/>
@@ -1735,7 +1735,7 @@
 																						<double key="NSMinWidth">72.55126953125</double>
 																						<double key="NSMaxWidth">3.4028234663852886e+38</double>
 																						<object class="NSTableHeaderCell" key="NSHeaderCell">
-																							<int key="NSCellFlags">67239488</int>
+																							<int key="NSCellFlags">75628096</int>
 																							<int key="NSCellFlags2">2048</int>
 																							<string key="NSContents">Temperature</string>
 																							<reference key="NSSupport" ref="26"/>
@@ -1753,23 +1753,29 @@
 																									<object class="NSArray" key="dict.sortedKeys">
 																										<bool key="EncodedWithXMLCoder">YES</bool>
 																										<string>allowsFloats</string>
+																										<string>decimalSeparator</string>
 																										<string>formatterBehavior</string>
+																										<string>groupingSeparator</string>
 																										<string>negativeFormat</string>
 																										<string>negativeInfinitySymbol</string>
 																										<string>nilSymbol</string>
 																										<string>positiveFormat</string>
 																										<string>positiveInfinitySymbol</string>
+																										<string>usesGroupingSeparator</string>
 																										<string>zeroSymbol</string>
 																									</object>
 																									<object class="NSMutableArray" key="dict.values">
 																										<bool key="EncodedWithXMLCoder">YES</bool>
 																										<boolean value="YES"/>
+																										<string>.</string>
 																										<integer value="1000"/>
+																										<string>,</string>
 																										<string>-0.00</string>
 																										<string>-∞</string>
 																										<string/>
 																										<string>0.00</string>
 																										<string>+∞</string>
+																										<boolean value="NO"/>
 																										<string>0.00</string>
 																									</object>
 																								</object>
@@ -3002,19 +3008,19 @@
 						<int key="objectID">100323</int>
 						<reference key="object" ref="968170133"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Station Array Controller</string>
+						<string key="objectName">Station Array Controller1</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100389</int>
 						<reference key="object" ref="277618176"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Observation Array Controller</string>
+						<string key="objectName">Observation Array Controller1</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100409</int>
 						<reference key="object" ref="910993573"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Station Array Controller</string>
+						<string key="objectName">Station Array Controller2</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100085</int>
@@ -3773,13 +3779,13 @@
 						<int key="objectID">100494</int>
 						<reference key="object" ref="203036696"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Observation Array Controller</string>
+						<string key="objectName">Observation Array Controller2</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100567</int>
 						<reference key="object" ref="763100274"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Observation Array Controller</string>
+						<string key="objectName">Observation Array Controller3</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100569</int>
@@ -3998,6 +4004,21 @@
 					<string>100490.IBPluginDependency</string>
 					<string>100491.IBPluginDependency</string>
 					<string>100494.IBPluginDependency</string>
+					<string>100567.IBPluginDependency</string>
+					<string>100569.IBPluginDependency</string>
+					<string>100570.IBPluginDependency</string>
+					<string>100571.IBPluginDependency</string>
+					<string>100574.IBPluginDependency</string>
+					<string>100575.IBPluginDependency</string>
+					<string>100576.IBPluginDependency</string>
+					<string>100577.IBPluginDependency</string>
+					<string>100578.IBPluginDependency</string>
+					<string>100579.IBPluginDependency</string>
+					<string>100580.IBPluginDependency</string>
+					<string>100581.IBPluginDependency</string>
+					<string>100583.IBPluginDependency</string>
+					<string>100584.IBPluginDependency</string>
+					<string>100585.IBPluginDependency</string>
 					<string>5.IBEditorWindowLastContentRect</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.IBWindowTemplateEditedContentRect</string>
@@ -4095,6 +4116,21 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

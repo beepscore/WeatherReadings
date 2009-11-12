@@ -139,11 +139,11 @@
 		E1B74B1A0667B4A90069E3BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DE73021310AB8A2100623614 /* Observation.h */,
-				DE73021410AB8A2100623614 /* Observation.m */,
 				DE73020E10AB89D100623614 /* Location.h */,
 				DE73020F10AB89D100623614 /* Location.m */,
 				775BDEF0067A8BF0009058FE /* MyDocument.xcdatamodel */,
+				DE73021310AB8A2100623614 /* Observation.h */,
+				DE73021410AB8A2100623614 /* Observation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";

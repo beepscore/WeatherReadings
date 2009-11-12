@@ -7,7 +7,7 @@
 //
 
 #import <CoreData/CoreData.h>
-
+@class Observation;
 
 @interface Location :  NSManagedObject  
 {
@@ -17,16 +17,17 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * lon;
 @property (nonatomic, retain) NSString * idCode;
-@property (nonatomic, retain) NSSet* observation;
+@property (nonatomic, retain) NSSet* observations;
 
 @end
 
 
 @interface Location (CoreDataGeneratedAccessors)
-- (void)addObservationObject:(NSManagedObject *)value;
-- (void)removeObservationObject:(NSManagedObject *)value;
-- (void)addObservation:(NSSet *)value;
-- (void)removeObservation:(NSSet *)value;
+- (void)addObservationsObject:(Observation *)value;
+- (void)removeObservationsObject:(Observation *)value;
+
+//- (void)addObservation:(NSSet *)value;
+//- (void)removeObservation:(NSSet *)value;
 
 @end
 

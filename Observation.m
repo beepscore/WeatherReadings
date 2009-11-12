@@ -16,4 +16,5 @@
 @dynamic temperature;
 @dynamic location;
 
+
 @end

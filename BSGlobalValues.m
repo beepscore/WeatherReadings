@@ -7,7 +7,6 @@
 #import "BSGlobalValues.h"
 
 
-// NSString * const BSCountKey = @"count";
-
-
+NSString * const BSObservationsKey = @"observations";
+//NSString * const BSIdCodeKey = @"idCode";
 

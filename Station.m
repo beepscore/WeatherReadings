@@ -1,17 +1,17 @@
 // 
-//  Location.m
+//  Station.m
 //  WeatherReadings
 //
 //  Created by Steve Baker on 11/11/09.
 //  Copyright 2009 Beepscore LLC. All rights reserved.
 //
 
-#import "Location.h"
+#import "Station.h"
 #import "Observation.h"
 #import "BSGlobalValues.h"
 
 
-@implementation Location 
+@implementation Station 
 
 @dynamic lat;
 @dynamic name;
@@ -26,7 +26,7 @@
 
 // Ref Hillegass Ch 30 pg 369
 - (void)addObservationsObject:(Observation *)value {
-    DLog(@"Location %@ adding observation %@",
+    DLog(@"Station %@ adding observation %@",
          [self name], [value time]);
     
     NSSet *s = [NSSet setWithObject:value];
@@ -40,7 +40,7 @@
 }
 
 - (void)removeObservationsObject:(Observation *)value {
-    DLog(@"Location %@ removing observation %@",
+    DLog(@"Station %@ removing observation %@",
          [self name], [value time]);
 
     NSSet *s = [NSSet setWithObject:value];

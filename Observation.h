@@ -8,7 +8,7 @@
 
 #import <CoreData/CoreData.h>
 
-@class Location;
+@class Station;
 
 @interface Observation :  NSManagedObject  
 {
@@ -16,9 +16,6 @@
 
 @property (nonatomic, retain) NSDate * time;
 @property (nonatomic, retain) NSNumber * temperature;
-@property (nonatomic, retain) Location * location;
+@property (nonatomic, retain) Station * station;
 
 @end
-
-
-

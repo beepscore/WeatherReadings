@@ -1,5 +1,5 @@
 //
-//  Location.h
+//  Station.h
 //  WeatherReadings
 //
 //  Created by Steve Baker on 11/11/09.
@@ -9,7 +9,7 @@
 #import <CoreData/CoreData.h>
 @class Observation;
 
-@interface Location :  NSManagedObject  
+@interface Station :  NSManagedObject  
 {
 }
 
@@ -22,7 +22,7 @@
 @end
 
 
-@interface Location (CoreDataGeneratedAccessors)
+@interface Station (CoreDataGeneratedAccessors)
 - (void)addObservationsObject:(Observation *)value;
 - (void)removeObservationsObject:(Observation *)value;
 

@@ -8,13 +8,13 @@
 
 #import "Observation.h"
 
-#import "Location.h"
+#import "Station.h"
 
 @implementation Observation 
 
 @dynamic time;
 @dynamic temperature;
-@dynamic location;
+@dynamic station;
 
 
 @end

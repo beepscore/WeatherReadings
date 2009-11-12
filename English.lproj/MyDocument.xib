@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100391"/>
+			<integer value="100085"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -61,9 +61,9 @@
 							<object class="NSMutableArray" key="NSTabViewItems">
 								<bool key="EncodedWithXMLCoder">YES</bool>
 								<object class="NSTabViewItem" id="30220944">
-									<string key="NSIdentifier">Item 1</string>
+									<string key="NSIdentifier">allObservations</string>
 									<object class="NSView" key="NSView" id="853786928">
-										<reference key="NSNextResponder" ref="943754556"/>
+										<nil key="NSNextResponder"/>
 										<int key="NSvFlags">274</int>
 										<object class="NSMutableArray" key="NSSubviews">
 											<bool key="EncodedWithXMLCoder">YES</bool>
@@ -776,7 +776,6 @@
 											</object>
 										</object>
 										<string key="NSFrame">{{10, 33}, {462, 582}}</string>
-										<reference key="NSSuperview" ref="943754556"/>
 									</object>
 									<string key="NSLabel">All Observations</string>
 									<object class="NSColor" key="NSColor" id="528405313">
@@ -788,9 +787,9 @@
 									<reference key="NSTabView" ref="943754556"/>
 								</object>
 								<object class="NSTabViewItem" id="709250957">
-									<string key="NSIdentifier">Item 2</string>
+									<string key="NSIdentifier">stations</string>
 									<object class="NSView" key="NSView" id="674115943">
-										<nil key="NSNextResponder"/>
+										<reference key="NSNextResponder" ref="943754556"/>
 										<int key="NSvFlags">288</int>
 										<object class="NSMutableArray" key="NSSubviews">
 											<bool key="EncodedWithXMLCoder">YES</bool>
@@ -846,7 +845,7 @@
 																<object class="NSTextFieldCell" key="NSCell" id="1000833501">
 																	<int key="NSCellFlags">67239424</int>
 																	<int key="NSCellFlags2">67108864</int>
-																	<string key="NSContents">Lat:</string>
+																	<string key="NSContents">Latitude:</string>
 																	<reference key="NSSupport" ref="643887303"/>
 																	<reference key="NSControlView" ref="918139945"/>
 																	<reference key="NSBackgroundColor" ref="570071332"/>
@@ -939,7 +938,7 @@
 																<object class="NSTextFieldCell" key="NSCell" id="157538283">
 																	<int key="NSCellFlags">67239424</int>
 																	<int key="NSCellFlags2">67108864</int>
-																	<string key="NSContents">Lon:</string>
+																	<string key="NSContents">Longitude:</string>
 																	<reference key="NSSupport" ref="643887303"/>
 																	<reference key="NSControlView" ref="681643810"/>
 																	<reference key="NSBackgroundColor" ref="570071332"/>
@@ -1545,20 +1544,107 @@
 											</object>
 										</object>
 										<string key="NSFrame">{{10, 33}, {462, 582}}</string>
+										<reference key="NSSuperview" ref="943754556"/>
 									</object>
 									<string key="NSLabel">Stations</string>
 									<reference key="NSColor" ref="528405313"/>
 									<reference key="NSTabView" ref="943754556"/>
 								</object>
+								<object class="NSTabViewItem" id="159518155">
+									<string key="NSIdentifier">byStation</string>
+									<object class="NSView" key="NSView" id="937632438">
+										<nil key="NSNextResponder"/>
+										<int key="NSvFlags">256</int>
+										<object class="NSMutableArray" key="NSSubviews">
+											<bool key="EncodedWithXMLCoder">YES</bool>
+											<object class="NSPopUpButton" id="121738634">
+												<reference key="NSNextResponder" ref="937632438"/>
+												<int key="NSvFlags">268</int>
+												<string key="NSFrame">{{14, 537}, {434, 26}}</string>
+												<reference key="NSSuperview" ref="937632438"/>
+												<bool key="NSEnabled">YES</bool>
+												<object class="NSPopUpButtonCell" key="NSCell" id="899890778">
+													<int key="NSCellFlags">-2076049856</int>
+													<int key="NSCellFlags2">2048</int>
+													<reference key="NSSupport" ref="643887303"/>
+													<reference key="NSControlView" ref="121738634"/>
+													<int key="NSButtonFlags">109199615</int>
+													<int key="NSButtonFlags2">129</int>
+													<string key="NSAlternateContents"/>
+													<string key="NSKeyEquivalent"/>
+													<int key="NSPeriodicDelay">400</int>
+													<int key="NSPeriodicInterval">75</int>
+													<object class="NSMenuItem" key="NSMenuItem" id="416759710">
+														<reference key="NSMenu" ref="794302512"/>
+														<string key="NSTitle">Item 1</string>
+														<string key="NSKeyEquiv"/>
+														<int key="NSKeyEquivModMask">1048576</int>
+														<int key="NSMnemonicLoc">2147483647</int>
+														<int key="NSState">1</int>
+														<object class="NSCustomResource" key="NSOnImage" id="37329376">
+															<string key="NSClassName">NSImage</string>
+															<string key="NSResourceName">NSMenuCheckmark</string>
+														</object>
+														<object class="NSCustomResource" key="NSMixedImage" id="530484900">
+															<string key="NSClassName">NSImage</string>
+															<string key="NSResourceName">NSMenuMixedState</string>
+														</object>
+														<string key="NSAction">_popUpItemAction:</string>
+														<reference key="NSTarget" ref="899890778"/>
+													</object>
+													<bool key="NSMenuItemRespectAlignment">YES</bool>
+													<object class="NSMenu" key="NSMenu" id="794302512">
+														<string key="NSTitle">OtherViews</string>
+														<object class="NSMutableArray" key="NSMenuItems">
+															<bool key="EncodedWithXMLCoder">YES</bool>
+															<reference ref="416759710"/>
+															<object class="NSMenuItem" id="909678906">
+																<reference key="NSMenu" ref="794302512"/>
+																<string key="NSTitle">Item 2</string>
+																<string key="NSKeyEquiv"/>
+																<int key="NSKeyEquivModMask">1048576</int>
+																<int key="NSMnemonicLoc">2147483647</int>
+																<reference key="NSOnImage" ref="37329376"/>
+																<reference key="NSMixedImage" ref="530484900"/>
+																<string key="NSAction">_popUpItemAction:</string>
+																<reference key="NSTarget" ref="899890778"/>
+															</object>
+															<object class="NSMenuItem" id="982451814">
+																<reference key="NSMenu" ref="794302512"/>
+																<string key="NSTitle">Item 3</string>
+																<string key="NSKeyEquiv"/>
+																<int key="NSKeyEquivModMask">1048576</int>
+																<int key="NSMnemonicLoc">2147483647</int>
+																<reference key="NSOnImage" ref="37329376"/>
+																<reference key="NSMixedImage" ref="530484900"/>
+																<string key="NSAction">_popUpItemAction:</string>
+																<reference key="NSTarget" ref="899890778"/>
+															</object>
+														</object>
+														<reference key="NSMenuFont" ref="643887303"/>
+													</object>
+													<int key="NSPreferredEdge">1</int>
+													<bool key="NSUsesItemFromMenu">YES</bool>
+													<bool key="NSAltersState">YES</bool>
+													<int key="NSArrowPosition">2</int>
+												</object>
+											</object>
+										</object>
+										<string key="NSFrame">{{10, 33}, {462, 582}}</string>
+									</object>
+									<string key="NSLabel">By station</string>
+									<reference key="NSColor" ref="528405313"/>
+									<reference key="NSTabView" ref="943754556"/>
+								</object>
 							</object>
-							<reference key="NSSelectedTabViewItem" ref="30220944"/>
+							<reference key="NSSelectedTabViewItem" ref="709250957"/>
 							<reference key="NSFont" ref="643887303"/>
 							<int key="NSTvFlags">0</int>
 							<bool key="NSAllowTruncatedLabels">YES</bool>
 							<bool key="NSDrawsBackground">YES</bool>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<reference ref="853786928"/>
+								<reference ref="674115943"/>
 							</object>
 						</object>
 					</object>
@@ -2437,6 +2523,22 @@
 					</object>
 					<int key="connectionID">100458</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">content: arrangedObjects.idCode</string>
+						<reference key="source" ref="121738634"/>
+						<reference key="destination" ref="910993573"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="121738634"/>
+							<reference key="NSDestination" ref="910993573"/>
+							<string key="NSLabel">content: arrangedObjects.idCode</string>
+							<string key="NSBinding">content</string>
+							<string key="NSKeyPath">arrangedObjects.idCode</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100493</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -2485,14 +2587,51 @@
 						<string key="objectName">Application</string>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">100323</int>
+						<reference key="object" ref="968170133"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Station Array Controller</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100389</int>
+						<reference key="object" ref="277618176"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Observation Array Controller</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100409</int>
+						<reference key="object" ref="910993573"/>
+						<reference key="parent" ref="0"/>
+						<string key="objectName">Station Array Controller</string>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">100085</int>
 						<reference key="object" ref="943754556"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="30220944"/>
+							<reference ref="159518155"/>
 							<reference ref="709250957"/>
+							<reference ref="30220944"/>
 						</object>
 						<reference key="parent" ref="317955023"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100459</int>
+						<reference key="object" ref="159518155"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="937632438"/>
+						</object>
+						<reference key="parent" ref="943754556"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100460</int>
+						<reference key="object" ref="937632438"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="121738634"/>
+						</object>
+						<reference key="parent" ref="159518155"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100255</int>
@@ -2513,270 +2652,52 @@
 						<reference key="parent" ref="709250957"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100257</int>
-						<reference key="object" ref="30220944"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="853786928"/>
-						</object>
-						<reference key="parent" ref="943754556"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100258</int>
-						<reference key="object" ref="853786928"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="192802005"/>
-						</object>
-						<reference key="parent" ref="30220944"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100323</int>
-						<reference key="object" ref="968170133"/>
-						<reference key="parent" ref="0"/>
-						<string key="objectName">Station Array Controller</string>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">100325</int>
 						<reference key="object" ref="579209683"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="248385004"/>
-							<reference ref="149093848"/>
-							<reference ref="918139945"/>
-							<reference ref="619873724"/>
-							<reference ref="681643810"/>
-							<reference ref="794344496"/>
-							<reference ref="878755270"/>
-							<reference ref="424570070"/>
-							<reference ref="220423401"/>
-							<reference ref="282539001"/>
-							<reference ref="450886437"/>
-							<reference ref="398985018"/>
-							<reference ref="757271503"/>
 							<reference ref="50033186"/>
+							<reference ref="757271503"/>
+							<reference ref="398985018"/>
+							<reference ref="450886437"/>
+							<reference ref="282539001"/>
+							<reference ref="220423401"/>
+							<reference ref="424570070"/>
+							<reference ref="878755270"/>
+							<reference ref="794344496"/>
+							<reference ref="681643810"/>
+							<reference ref="619873724"/>
+							<reference ref="918139945"/>
+							<reference ref="149093848"/>
+							<reference ref="248385004"/>
 						</object>
 						<reference key="parent" ref="674115943"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100326</int>
-						<reference key="object" ref="248385004"/>
+						<int key="objectID">100382</int>
+						<reference key="object" ref="50033186"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="709853312"/>
+							<reference ref="973700655"/>
 						</object>
 						<reference key="parent" ref="579209683"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100327</int>
-						<reference key="object" ref="709853312"/>
-						<reference key="parent" ref="248385004"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100328</int>
-						<reference key="object" ref="149093848"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="947654296"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100329</int>
-						<reference key="object" ref="947654296"/>
-						<reference key="parent" ref="149093848"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100331</int>
-						<reference key="object" ref="918139945"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1000833501"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100332</int>
-						<reference key="object" ref="1000833501"/>
-						<reference key="parent" ref="918139945"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100333</int>
-						<reference key="object" ref="619873724"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="393380992"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100334</int>
-						<reference key="object" ref="393380992"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="301435384"/>
-						</object>
-						<reference key="parent" ref="619873724"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100335</int>
-						<reference key="object" ref="301435384"/>
-						<reference key="parent" ref="393380992"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100337</int>
-						<reference key="object" ref="681643810"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="157538283"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100338</int>
-						<reference key="object" ref="157538283"/>
-						<reference key="parent" ref="681643810"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100339</int>
-						<reference key="object" ref="794344496"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1059341799"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100340</int>
-						<reference key="object" ref="1059341799"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1001175530"/>
-						</object>
-						<reference key="parent" ref="794344496"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100341</int>
-						<reference key="object" ref="1001175530"/>
-						<reference key="parent" ref="1059341799"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100343</int>
-						<reference key="object" ref="878755270"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="37366160"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100344</int>
-						<reference key="object" ref="37366160"/>
-						<reference key="parent" ref="878755270"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100345</int>
-						<reference key="object" ref="424570070"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="263459414"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100346</int>
-						<reference key="object" ref="263459414"/>
-						<reference key="parent" ref="424570070"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100348</int>
-						<reference key="object" ref="220423401"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="684903861"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100349</int>
-						<reference key="object" ref="684903861"/>
-						<reference key="parent" ref="220423401"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100352</int>
-						<reference key="object" ref="282539001"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="689912748"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100353</int>
-						<reference key="object" ref="689912748"/>
-						<reference key="parent" ref="282539001"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100355</int>
-						<reference key="object" ref="450886437"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="444555698"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100356</int>
-						<reference key="object" ref="444555698"/>
-						<reference key="parent" ref="450886437"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100359</int>
-						<reference key="object" ref="398985018"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="840151178"/>
-						</object>
-						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100360</int>
-						<reference key="object" ref="840151178"/>
-						<reference key="parent" ref="398985018"/>
+						<int key="objectID">100383</int>
+						<reference key="object" ref="973700655"/>
+						<reference key="parent" ref="50033186"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100363</int>
 						<reference key="object" ref="757271503"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="403630323"/>
-							<reference ref="801899751"/>
-							<reference ref="665961806"/>
 							<reference ref="158013448"/>
+							<reference ref="665961806"/>
+							<reference ref="801899751"/>
+							<reference ref="403630323"/>
 						</object>
 						<reference key="parent" ref="579209683"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100364</int>
-						<reference key="object" ref="403630323"/>
-						<reference key="parent" ref="757271503"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100365</int>
-						<reference key="object" ref="801899751"/>
-						<reference key="parent" ref="757271503"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100366</int>
-						<reference key="object" ref="665961806"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="729180326"/>
-							<reference ref="514300034"/>
-							<reference ref="908141627"/>
-							<reference ref="449780999"/>
-						</object>
-						<reference key="parent" ref="757271503"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100367</int>
@@ -2784,41 +2705,30 @@
 						<reference key="parent" ref="757271503"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100368</int>
-						<reference key="object" ref="729180326"/>
+						<int key="objectID">100366</int>
+						<reference key="object" ref="665961806"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="847925196"/>
+							<reference ref="449780999"/>
+							<reference ref="908141627"/>
+							<reference ref="514300034"/>
+							<reference ref="729180326"/>
+						</object>
+						<reference key="parent" ref="757271503"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100379</int>
+						<reference key="object" ref="449780999"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="69994510"/>
 						</object>
 						<reference key="parent" ref="665961806"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100369</int>
-						<reference key="object" ref="847925196"/>
-						<reference key="parent" ref="729180326"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100371</int>
-						<reference key="object" ref="514300034"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="345495036"/>
-						</object>
-						<reference key="parent" ref="665961806"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100372</int>
-						<reference key="object" ref="345495036"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="170037678"/>
-						</object>
-						<reference key="parent" ref="514300034"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100373</int>
-						<reference key="object" ref="170037678"/>
-						<reference key="parent" ref="345495036"/>
+						<int key="objectID">100380</int>
+						<reference key="object" ref="69994510"/>
+						<reference key="parent" ref="449780999"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100375</int>
@@ -2844,264 +2754,301 @@
 						<reference key="parent" ref="576083122"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100379</int>
-						<reference key="object" ref="449780999"/>
+						<int key="objectID">100371</int>
+						<reference key="object" ref="514300034"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="69994510"/>
+							<reference ref="345495036"/>
 						</object>
 						<reference key="parent" ref="665961806"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100380</int>
-						<reference key="object" ref="69994510"/>
-						<reference key="parent" ref="449780999"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100382</int>
-						<reference key="object" ref="50033186"/>
+						<int key="objectID">100372</int>
+						<reference key="object" ref="345495036"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="973700655"/>
+							<reference ref="170037678"/>
+						</object>
+						<reference key="parent" ref="514300034"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100373</int>
+						<reference key="object" ref="170037678"/>
+						<reference key="parent" ref="345495036"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100368</int>
+						<reference key="object" ref="729180326"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="847925196"/>
+						</object>
+						<reference key="parent" ref="665961806"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100369</int>
+						<reference key="object" ref="847925196"/>
+						<reference key="parent" ref="729180326"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100365</int>
+						<reference key="object" ref="801899751"/>
+						<reference key="parent" ref="757271503"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100364</int>
+						<reference key="object" ref="403630323"/>
+						<reference key="parent" ref="757271503"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100359</int>
+						<reference key="object" ref="398985018"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="840151178"/>
 						</object>
 						<reference key="parent" ref="579209683"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100383</int>
-						<reference key="object" ref="973700655"/>
-						<reference key="parent" ref="50033186"/>
+						<int key="objectID">100360</int>
+						<reference key="object" ref="840151178"/>
+						<reference key="parent" ref="398985018"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100389</int>
-						<reference key="object" ref="277618176"/>
-						<reference key="parent" ref="0"/>
-						<string key="objectName">Observation Array Controller</string>
+						<int key="objectID">100355</int>
+						<reference key="object" ref="450886437"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="444555698"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100356</int>
+						<reference key="object" ref="444555698"/>
+						<reference key="parent" ref="450886437"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100352</int>
+						<reference key="object" ref="282539001"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="689912748"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100353</int>
+						<reference key="object" ref="689912748"/>
+						<reference key="parent" ref="282539001"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100348</int>
+						<reference key="object" ref="220423401"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="684903861"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100349</int>
+						<reference key="object" ref="684903861"/>
+						<reference key="parent" ref="220423401"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100345</int>
+						<reference key="object" ref="424570070"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="263459414"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100346</int>
+						<reference key="object" ref="263459414"/>
+						<reference key="parent" ref="424570070"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100343</int>
+						<reference key="object" ref="878755270"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="37366160"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100344</int>
+						<reference key="object" ref="37366160"/>
+						<reference key="parent" ref="878755270"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100339</int>
+						<reference key="object" ref="794344496"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="1059341799"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100340</int>
+						<reference key="object" ref="1059341799"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="1001175530"/>
+						</object>
+						<reference key="parent" ref="794344496"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100341</int>
+						<reference key="object" ref="1001175530"/>
+						<reference key="parent" ref="1059341799"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100337</int>
+						<reference key="object" ref="681643810"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="157538283"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100338</int>
+						<reference key="object" ref="157538283"/>
+						<reference key="parent" ref="681643810"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100333</int>
+						<reference key="object" ref="619873724"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="393380992"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100334</int>
+						<reference key="object" ref="393380992"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="301435384"/>
+						</object>
+						<reference key="parent" ref="619873724"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100335</int>
+						<reference key="object" ref="301435384"/>
+						<reference key="parent" ref="393380992"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100331</int>
+						<reference key="object" ref="918139945"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="1000833501"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100332</int>
+						<reference key="object" ref="1000833501"/>
+						<reference key="parent" ref="918139945"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100328</int>
+						<reference key="object" ref="149093848"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="947654296"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100329</int>
+						<reference key="object" ref="947654296"/>
+						<reference key="parent" ref="149093848"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100326</int>
+						<reference key="object" ref="248385004"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="709853312"/>
+						</object>
+						<reference key="parent" ref="579209683"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100327</int>
+						<reference key="object" ref="709853312"/>
+						<reference key="parent" ref="248385004"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100257</int>
+						<reference key="object" ref="30220944"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="853786928"/>
+						</object>
+						<reference key="parent" ref="943754556"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100258</int>
+						<reference key="object" ref="853786928"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="192802005"/>
+						</object>
+						<reference key="parent" ref="30220944"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100391</int>
 						<reference key="object" ref="192802005"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="475738183"/>
-							<reference ref="809817508"/>
-							<reference ref="330392715"/>
-							<reference ref="68029812"/>
-							<reference ref="569953652"/>
-							<reference ref="401571057"/>
-							<reference ref="212308332"/>
-							<reference ref="913263382"/>
-							<reference ref="1002441651"/>
-							<reference ref="699682878"/>
-							<reference ref="908457149"/>
 							<reference ref="1012332964"/>
+							<reference ref="908457149"/>
+							<reference ref="699682878"/>
+							<reference ref="1002441651"/>
+							<reference ref="913263382"/>
+							<reference ref="212308332"/>
+							<reference ref="401571057"/>
+							<reference ref="569953652"/>
+							<reference ref="68029812"/>
+							<reference ref="330392715"/>
+							<reference ref="809817508"/>
+							<reference ref="475738183"/>
 						</object>
 						<reference key="parent" ref="853786928"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100392</int>
-						<reference key="object" ref="475738183"/>
+						<int key="objectID">100448</int>
+						<reference key="object" ref="1012332964"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="664568272"/>
+							<reference ref="585893380"/>
 						</object>
 						<reference key="parent" ref="192802005"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100393</int>
-						<reference key="object" ref="664568272"/>
-						<reference key="parent" ref="475738183"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100394</int>
-						<reference key="object" ref="809817508"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="135870905"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100395</int>
-						<reference key="object" ref="135870905"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="193592204"/>
-						</object>
-						<reference key="parent" ref="809817508"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100396</int>
-						<reference key="object" ref="193592204"/>
-						<reference key="parent" ref="135870905"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100398</int>
-						<reference key="object" ref="330392715"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="499281599"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100399</int>
-						<reference key="object" ref="499281599"/>
-						<reference key="parent" ref="330392715"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100400</int>
-						<reference key="object" ref="68029812"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="246154405"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100401</int>
-						<reference key="object" ref="246154405"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="125866967"/>
-						</object>
-						<reference key="parent" ref="68029812"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100402</int>
-						<reference key="object" ref="125866967"/>
-						<reference key="parent" ref="246154405"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100404</int>
-						<reference key="object" ref="569953652"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="860553955"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100405</int>
-						<reference key="object" ref="860553955"/>
-						<reference key="parent" ref="569953652"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100406</int>
-						<reference key="object" ref="401571057"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="924503398"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100407</int>
-						<reference key="object" ref="924503398"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="823325623"/>
-						</object>
-						<reference key="parent" ref="401571057"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100408</int>
-						<reference key="object" ref="823325623"/>
-						<reference key="parent" ref="924503398"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100409</int>
-						<reference key="object" ref="910993573"/>
-						<reference key="parent" ref="0"/>
-						<string key="objectName">Station Array Controller</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100414</int>
-						<reference key="object" ref="212308332"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="814752698"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100415</int>
-						<reference key="object" ref="814752698"/>
-						<reference key="parent" ref="212308332"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100418</int>
-						<reference key="object" ref="913263382"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="424893191"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100419</int>
-						<reference key="object" ref="424893191"/>
-						<reference key="parent" ref="913263382"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100421</int>
-						<reference key="object" ref="1002441651"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="462158515"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100422</int>
-						<reference key="object" ref="462158515"/>
-						<reference key="parent" ref="1002441651"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100425</int>
-						<reference key="object" ref="699682878"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="500276827"/>
-						</object>
-						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100426</int>
-						<reference key="object" ref="500276827"/>
-						<reference key="parent" ref="699682878"/>
+						<int key="objectID">100449</int>
+						<reference key="object" ref="585893380"/>
+						<reference key="parent" ref="1012332964"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100429</int>
 						<reference key="object" ref="908457149"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="712576715"/>
-							<reference ref="759267952"/>
-							<reference ref="361275354"/>
 							<reference ref="1027940568"/>
+							<reference ref="361275354"/>
+							<reference ref="759267952"/>
+							<reference ref="712576715"/>
 						</object>
 						<reference key="parent" ref="192802005"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100430</int>
-						<reference key="object" ref="712576715"/>
-						<reference key="parent" ref="908457149"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100431</int>
-						<reference key="object" ref="759267952"/>
-						<reference key="parent" ref="908457149"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100432</int>
-						<reference key="object" ref="361275354"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="753353362"/>
-							<reference ref="647067258"/>
-							<reference ref="287317005"/>
-						</object>
-						<reference key="parent" ref="908457149"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100433</int>
@@ -3109,50 +3056,15 @@
 						<reference key="parent" ref="908457149"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100434</int>
-						<reference key="object" ref="753353362"/>
+						<int key="objectID">100432</int>
+						<reference key="object" ref="361275354"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="363482332"/>
+							<reference ref="287317005"/>
+							<reference ref="647067258"/>
+							<reference ref="753353362"/>
 						</object>
-						<reference key="parent" ref="361275354"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100435</int>
-						<reference key="object" ref="363482332"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="1048050896"/>
-						</object>
-						<reference key="parent" ref="753353362"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100436</int>
-						<reference key="object" ref="1048050896"/>
-						<reference key="parent" ref="363482332"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100438</int>
-						<reference key="object" ref="647067258"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="43207633"/>
-						</object>
-						<reference key="parent" ref="361275354"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100439</int>
-						<reference key="object" ref="43207633"/>
-						<object class="NSMutableArray" key="children">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="854822308"/>
-						</object>
-						<reference key="parent" ref="647067258"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">100440</int>
-						<reference key="object" ref="854822308"/>
-						<reference key="parent" ref="43207633"/>
+						<reference key="parent" ref="908457149"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100442</int>
@@ -3178,18 +3090,271 @@
 						<reference key="parent" ref="692499641"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100448</int>
-						<reference key="object" ref="1012332964"/>
+						<int key="objectID">100438</int>
+						<reference key="object" ref="647067258"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="585893380"/>
+							<reference ref="43207633"/>
+						</object>
+						<reference key="parent" ref="361275354"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100439</int>
+						<reference key="object" ref="43207633"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="854822308"/>
+						</object>
+						<reference key="parent" ref="647067258"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100440</int>
+						<reference key="object" ref="854822308"/>
+						<reference key="parent" ref="43207633"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100434</int>
+						<reference key="object" ref="753353362"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="363482332"/>
+						</object>
+						<reference key="parent" ref="361275354"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100435</int>
+						<reference key="object" ref="363482332"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="1048050896"/>
+						</object>
+						<reference key="parent" ref="753353362"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100436</int>
+						<reference key="object" ref="1048050896"/>
+						<reference key="parent" ref="363482332"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100431</int>
+						<reference key="object" ref="759267952"/>
+						<reference key="parent" ref="908457149"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100430</int>
+						<reference key="object" ref="712576715"/>
+						<reference key="parent" ref="908457149"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100425</int>
+						<reference key="object" ref="699682878"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="500276827"/>
 						</object>
 						<reference key="parent" ref="192802005"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">100449</int>
-						<reference key="object" ref="585893380"/>
-						<reference key="parent" ref="1012332964"/>
+						<int key="objectID">100426</int>
+						<reference key="object" ref="500276827"/>
+						<reference key="parent" ref="699682878"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100421</int>
+						<reference key="object" ref="1002441651"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="462158515"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100422</int>
+						<reference key="object" ref="462158515"/>
+						<reference key="parent" ref="1002441651"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100418</int>
+						<reference key="object" ref="913263382"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="424893191"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100419</int>
+						<reference key="object" ref="424893191"/>
+						<reference key="parent" ref="913263382"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100414</int>
+						<reference key="object" ref="212308332"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="814752698"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100415</int>
+						<reference key="object" ref="814752698"/>
+						<reference key="parent" ref="212308332"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100406</int>
+						<reference key="object" ref="401571057"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="924503398"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100407</int>
+						<reference key="object" ref="924503398"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="823325623"/>
+						</object>
+						<reference key="parent" ref="401571057"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100408</int>
+						<reference key="object" ref="823325623"/>
+						<reference key="parent" ref="924503398"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100404</int>
+						<reference key="object" ref="569953652"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="860553955"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100405</int>
+						<reference key="object" ref="860553955"/>
+						<reference key="parent" ref="569953652"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100400</int>
+						<reference key="object" ref="68029812"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="246154405"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100401</int>
+						<reference key="object" ref="246154405"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="125866967"/>
+						</object>
+						<reference key="parent" ref="68029812"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100402</int>
+						<reference key="object" ref="125866967"/>
+						<reference key="parent" ref="246154405"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100398</int>
+						<reference key="object" ref="330392715"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="499281599"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100399</int>
+						<reference key="object" ref="499281599"/>
+						<reference key="parent" ref="330392715"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100394</int>
+						<reference key="object" ref="809817508"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="135870905"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100395</int>
+						<reference key="object" ref="135870905"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="193592204"/>
+						</object>
+						<reference key="parent" ref="809817508"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100396</int>
+						<reference key="object" ref="193592204"/>
+						<reference key="parent" ref="135870905"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100392</int>
+						<reference key="object" ref="475738183"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="664568272"/>
+						</object>
+						<reference key="parent" ref="192802005"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100393</int>
+						<reference key="object" ref="664568272"/>
+						<reference key="parent" ref="475738183"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100486</int>
+						<reference key="object" ref="121738634"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="899890778"/>
+						</object>
+						<reference key="parent" ref="937632438"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100487</int>
+						<reference key="object" ref="899890778"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="794302512"/>
+						</object>
+						<reference key="parent" ref="121738634"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100488</int>
+						<reference key="object" ref="794302512"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="416759710"/>
+							<reference ref="909678906"/>
+							<reference ref="982451814"/>
+						</object>
+						<reference key="parent" ref="899890778"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100489</int>
+						<reference key="object" ref="416759710"/>
+						<reference key="parent" ref="794302512"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100490</int>
+						<reference key="object" ref="909678906"/>
+						<reference key="parent" ref="794302512"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100491</int>
+						<reference key="object" ref="982451814"/>
+						<reference key="parent" ref="794302512"/>
 					</object>
 				</object>
 			</object>
@@ -3292,6 +3457,14 @@
 					<string>100444.IBPluginDependency</string>
 					<string>100448.IBPluginDependency</string>
 					<string>100449.IBPluginDependency</string>
+					<string>100459.IBPluginDependency</string>
+					<string>100460.IBPluginDependency</string>
+					<string>100486.IBPluginDependency</string>
+					<string>100487.IBPluginDependency</string>
+					<string>100488.IBPluginDependency</string>
+					<string>100489.IBPluginDependency</string>
+					<string>100490.IBPluginDependency</string>
+					<string>100491.IBPluginDependency</string>
 					<string>5.IBEditorWindowLastContentRect</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.IBWindowTemplateEditedContentRect</string>
@@ -3398,6 +3571,14 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{386, 212}, {524, 644}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{386, 212}, {524, 644}}</string>
@@ -3424,7 +3605,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100458</int>
+			<int key="maxID">100493</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3637,6 +3818,14 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="743618167">
 						<string key="majorKey">IBFrameworkSource</string>
 						<string key="minorKey">AppKit.framework/Headers/NSMenu.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSMenuItem</string>
+					<string key="superclassName">NSObject</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="786901465">
+						<string key="majorKey">IBFrameworkSource</string>
+						<string key="minorKey">AppKit.framework/Headers/NSMenuItem.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
@@ -4040,10 +4229,7 @@
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBFrameworkSource</string>
-						<string key="minorKey">AppKit.framework/Headers/NSMenuItem.h</string>
-					</object>
+					<reference key="sourceIdentifier" ref="786901465"/>
 				</object>
 				<object class="IBPartialClassDescription">
 					<string key="className">NSView</string>

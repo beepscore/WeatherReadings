@@ -86,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E1B74B1A0667B4A90069E3BA /* Models */,
+				DE9D2FF810AB967200271A69 /* ManagedObjects */,
 				2A37F4ABFDCFA73011CA2CEA /* Classes */,
 				2A37F4AFFDCFA73011CA2CEA /* Other Sources */,
 				2A37F4B8FDCFA73011CA2CEA /* Resources */,
@@ -136,14 +137,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE9D2FF810AB967200271A69 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+				DE73021310AB8A2100623614 /* Observation.h */,
+				DE73021410AB8A2100623614 /* Observation.m */,
+				DE73020E10AB89D100623614 /* Location.h */,
+				DE73020F10AB89D100623614 /* Location.m */,
+			);
+			name = ManagedObjects;
+			sourceTree = "<group>";
+		};
 		E1B74B1A0667B4A90069E3BA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DE73020E10AB89D100623614 /* Location.h */,
-				DE73020F10AB89D100623614 /* Location.m */,
 				775BDEF0067A8BF0009058FE /* MyDocument.xcdatamodel */,
-				DE73021310AB8A2100623614 /* Observation.h */,
-				DE73021410AB8A2100623614 /* Observation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";

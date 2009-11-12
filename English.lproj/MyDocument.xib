@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100085"/>
+			<integer value="100325"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -870,6 +870,8 @@
 																				<string>decimalSeparator</string>
 																				<string>formatterBehavior</string>
 																				<string>groupingSeparator</string>
+																				<string>maximum</string>
+																				<string>minimum</string>
 																				<string>negativeFormat</string>
 																				<string>negativeInfinitySymbol</string>
 																				<string>nilSymbol</string>
@@ -884,6 +886,8 @@
 																				<string>.</string>
 																				<integer value="1000"/>
 																				<string>,</string>
+																				<real value="90"/>
+																				<real value="-90"/>
 																				<string>-0.00</string>
 																				<string>-∞</string>
 																				<string/>
@@ -908,8 +912,8 @@
 																			<string key="NSString">NaN</string>
 																			<reference key="NSAttributes" ref="575486522"/>
 																		</object>
-																		<reference key="NS.min" ref="232277586"/>
-																		<reference key="NS.max" ref="232277586"/>
+																		<real value="-90" key="NS.min"/>
+																		<real value="90" key="NS.max"/>
 																		<nil key="NS.rounding"/>
 																		<string key="NS.decimal">.</string>
 																		<string key="NS.thousand">,</string>
@@ -959,6 +963,8 @@
 																				<string>decimalSeparator</string>
 																				<string>formatterBehavior</string>
 																				<string>groupingSeparator</string>
+																				<string>maximum</string>
+																				<string>minimum</string>
 																				<string>negativeFormat</string>
 																				<string>negativeInfinitySymbol</string>
 																				<string>nilSymbol</string>
@@ -973,6 +979,8 @@
 																				<string>.</string>
 																				<integer value="1000"/>
 																				<string>,</string>
+																				<real value="180"/>
+																				<real value="-180"/>
 																				<string>-0.00</string>
 																				<string>-∞</string>
 																				<string/>
@@ -997,8 +1005,8 @@
 																			<string key="NSString">NaN</string>
 																			<reference key="NSAttributes" ref="575486522"/>
 																		</object>
-																		<reference key="NS.min" ref="232277586"/>
-																		<reference key="NS.max" ref="232277586"/>
+																		<real value="-180" key="NS.min"/>
+																		<real value="180" key="NS.max"/>
 																		<nil key="NS.rounding"/>
 																		<string key="NS.decimal">.</string>
 																		<string key="NS.thousand">,</string>

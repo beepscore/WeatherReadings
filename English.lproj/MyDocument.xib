@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100460"/>
+			<integer value="100583"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1707,19 +1707,19 @@
 																									<bool key="EncodedWithXMLCoder">YES</bool>
 																									<object class="NSArray" key="dict.sortedKeys">
 																										<bool key="EncodedWithXMLCoder">YES</bool>
-																										<string>dateFormat_10_0</string>
+																										<string>dateStyle</string>
 																										<string>formatterBehavior</string>
-																										<string>lenient</string>
+																										<string>timeStyle</string>
 																									</object>
 																									<object class="NSMutableArray" key="dict.values">
 																										<bool key="EncodedWithXMLCoder">YES</bool>
-																										<string>%c</string>
-																										<integer value="1000"/>
-																										<boolean value="YES"/>
+																										<integer value="1"/>
+																										<integer value="1040"/>
+																										<integer value="2"/>
 																									</object>
 																								</object>
-																								<string key="NS.format">%c</string>
-																								<bool key="NS.natural">YES</bool>
+																								<string key="NS.format">M/d/yy h:mm:ss a</string>
+																								<bool key="NS.natural">NO</bool>
 																							</object>
 																							<reference key="NSControlView" ref="116520106"/>
 																							<reference key="NSBackgroundColor" ref="181099281"/>
@@ -1770,17 +1770,17 @@
 																										<string>.</string>
 																										<integer value="1000"/>
 																										<string>,</string>
-																										<string>-0.00</string>
+																										<string>-0.</string>
 																										<string>-∞</string>
 																										<string/>
-																										<string>0.00</string>
+																										<string>0.</string>
 																										<string>+∞</string>
 																										<boolean value="NO"/>
 																										<string>0.00</string>
 																									</object>
 																								</object>
-																								<string key="NS.positiveformat">0.00</string>
-																								<string key="NS.negativeformat">-0.00</string>
+																								<string key="NS.positiveformat">0.</string>
+																								<string key="NS.negativeformat">-0.</string>
 																								<nil key="NS.positiveattrs"/>
 																								<nil key="NS.negativeattrs"/>
 																								<object class="NSAttributedString" key="NS.zero">
@@ -3008,19 +3008,19 @@
 						<int key="objectID">100323</int>
 						<reference key="object" ref="968170133"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Station Array Controller1</string>
+						<string key="objectName">stationsTab Station Array Controller</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100389</int>
 						<reference key="object" ref="277618176"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Observation Array Controller1</string>
+						<string key="objectName">allObsTab Observation Array Controller</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100409</int>
 						<reference key="object" ref="910993573"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Station Array Controller2</string>
+						<string key="objectName">byStationTab Station Array Controller</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100085</int>
@@ -3785,7 +3785,7 @@
 						<int key="objectID">100567</int>
 						<reference key="object" ref="763100274"/>
 						<reference key="parent" ref="0"/>
-						<string key="objectName">Observation Array Controller3</string>
+						<string key="objectName">byStationTab Observation Array Controller</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100569</int>
@@ -4015,6 +4015,7 @@
 					<string>100578.IBPluginDependency</string>
 					<string>100579.IBPluginDependency</string>
 					<string>100580.IBPluginDependency</string>
+					<string>100581.IBDateFormatterBehaviorMetadataKey</string>
 					<string>100581.IBPluginDependency</string>
 					<string>100583.IBPluginDependency</string>
 					<string>100584.IBPluginDependency</string>
@@ -4145,6 +4146,7 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>

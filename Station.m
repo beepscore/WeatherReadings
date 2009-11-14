@@ -13,9 +13,9 @@
 
 @implementation Station 
 
-@dynamic lat;
+@dynamic latitude;
 @dynamic name;
-@dynamic lon;
+@dynamic longitude;
 @dynamic idCode;
 @dynamic observations;
 

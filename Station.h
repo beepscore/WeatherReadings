@@ -13,9 +13,9 @@
 {
 }
 
-@property (nonatomic, retain) NSNumber * lat;
+@property (nonatomic, retain) NSNumber * latitude;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * lon;
+@property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSString * idCode;
 @property (nonatomic, retain) NSSet* observations;
 

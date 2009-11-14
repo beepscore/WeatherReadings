@@ -1170,13 +1170,13 @@
 											<object class="NSTextField" id="193668005">
 												<reference key="NSNextResponder" ref="674115943"/>
 												<int key="NSvFlags">268</int>
-												<string key="NSFrame">{{15, 237}, {72, 17}}</string>
+												<string key="NSFrame">{{208, 219}, {115, 17}}</string>
 												<reference key="NSSuperview" ref="674115943"/>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSTextFieldCell" key="NSCell" id="189890115">
 													<int key="NSCellFlags">68288064</int>
-													<int key="NSCellFlags2">272630784</int>
-													<string key="NSContents">Min Temp:</string>
+													<int key="NSCellFlags2">71304192</int>
+													<string key="NSContents">Minimum Temp:</string>
 													<reference key="NSSupport" ref="643887303"/>
 													<reference key="NSControlView" ref="193668005"/>
 													<object class="NSColor" key="NSBackgroundColor" id="528405313">
@@ -1191,7 +1191,7 @@
 											<object class="NSTextField" id="272077693">
 												<reference key="NSNextResponder" ref="674115943"/>
 												<int key="NSvFlags">268</int>
-												<string key="NSFrame">{{89, 237}, {38, 17}}</string>
+												<string key="NSFrame">{{325, 219}, {38, 17}}</string>
 												<reference key="NSSuperview" ref="674115943"/>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSTextFieldCell" key="NSCell" id="689198520">
@@ -1207,12 +1207,12 @@
 											<object class="NSTextField" id="990893625">
 												<reference key="NSNextResponder" ref="674115943"/>
 												<int key="NSvFlags">268</int>
-												<string key="NSFrame">{{212, 237}, {111, 17}}</string>
+												<string key="NSFrame">{{212, 234}, {111, 17}}</string>
 												<reference key="NSSuperview" ref="674115943"/>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSTextFieldCell" key="NSCell" id="299373745">
 													<int key="NSCellFlags">68288064</int>
-													<int key="NSCellFlags2">272630784</int>
+													<int key="NSCellFlags2">71304192</int>
 													<string key="NSContents">Maximum Temp:</string>
 													<reference key="NSSupport" ref="643887303"/>
 													<reference key="NSControlView" ref="990893625"/>
@@ -1223,7 +1223,7 @@
 											<object class="NSTextField" id="674084751">
 												<reference key="NSNextResponder" ref="674115943"/>
 												<int key="NSvFlags">268</int>
-												<string key="NSFrame">{{325, 237}, {38, 17}}</string>
+												<string key="NSFrame">{{325, 234}, {38, 17}}</string>
 												<reference key="NSSuperview" ref="674115943"/>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSTextFieldCell" key="NSCell" id="322118634">
@@ -2349,6 +2349,10 @@
 					<string>temperature.@maximum</string>
 					<string>@minimum.temperature</string>
 					<string>@maximum.temperature</string>
+					<string>@minimum</string>
+					<string>temperature.@min</string>
+					<string>@min.temperature</string>
+					<string>@max.temperature</string>
 				</object>
 				<bool key="NSEditable">YES</bool>
 				<bool key="NSAutomaticallyPreparesContent">YES</bool>
@@ -3470,6 +3474,38 @@
 					</object>
 					<int key="connectionID">100637</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.@min.temperature</string>
+						<reference key="source" ref="272077693"/>
+						<reference key="destination" ref="386024360"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="272077693"/>
+							<reference key="NSDestination" ref="386024360"/>
+							<string key="NSLabel">value: arrangedObjects.@min.temperature</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.@min.temperature</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100667</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.@max.temperature</string>
+						<reference key="source" ref="674084751"/>
+						<reference key="destination" ref="386024360"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="674084751"/>
+							<reference key="NSDestination" ref="386024360"/>
+							<string key="NSLabel">value: arrangedObjects.@max.temperature</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.@max.temperature</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100671</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -3586,10 +3622,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="716835122"/>
 							<reference ref="579209683"/>
-							<reference ref="193668005"/>
-							<reference ref="272077693"/>
-							<reference ref="990893625"/>
 							<reference ref="674084751"/>
+							<reference ref="272077693"/>
+							<reference ref="193668005"/>
+							<reference ref="990893625"/>
 						</object>
 						<reference key="parent" ref="709250957"/>
 					</object>
@@ -4964,7 +5000,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100654</int>
+			<int key="maxID">100671</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

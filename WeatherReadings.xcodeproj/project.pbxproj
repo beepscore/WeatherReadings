@@ -15,6 +15,7 @@
 		8D15AC2F0486D014006FF6A4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165FFE840EACC02AAC07 /* InfoPlist.strings */; };
 		8D15AC310486D014006FF6A4 /* MyDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */; settings = {ATTRIBUTES = (); }; };
 		8D15AC320486D014006FF6A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A37F4B0FDCFA73011CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		DE685B8B10B356C1000C4CE3 /* StationIdCodeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = DE685B8A10B356C1000C4CE3 /* StationIdCodeFormatter.m */; };
 		DE73021010AB89D100623614 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = DE73020F10AB89D100623614 /* Station.m */; };
 		DE73021510AB8A2100623614 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE73021410AB8A2100623614 /* Observation.m */; };
 		DE79595C10AB790D00416C7F /* BSGlobalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = DE79595B10AB790D00416C7F /* BSGlobalValues.m */; };
@@ -36,6 +37,8 @@
 		7788DA0506752A1600599AAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		8D15AC360486D014006FF6A4 /* WeatherReadings-Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.xml; fileEncoding = 4; path = "WeatherReadings-Info.plist"; sourceTree = "<group>"; };
 		8D15AC370486D014006FF6A4 /* WeatherReadings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherReadings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE685B8910B356C1000C4CE3 /* StationIdCodeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationIdCodeFormatter.h; sourceTree = "<group>"; };
+		DE685B8A10B356C1000C4CE3 /* StationIdCodeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationIdCodeFormatter.m; sourceTree = "<group>"; };
 		DE73020E10AB89D100623614 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
 		DE73020F10AB89D100623614 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
 		DE73021310AB8A2100623614 /* Observation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Observation.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				DE79595B10AB790D00416C7F /* BSGlobalValues.m */,
 				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
 				2A37F4ACFDCFA73011CA2CEA /* MyDocument.m */,
+				DE685B8910B356C1000C4CE3 /* StationIdCodeFormatter.h */,
+				DE685B8A10B356C1000C4CE3 /* StationIdCodeFormatter.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 				DE79595C10AB790D00416C7F /* BSGlobalValues.m in Sources */,
 				DE73021010AB89D100623614 /* Station.m in Sources */,
 				DE73021510AB8A2100623614 /* Observation.m in Sources */,
+				DE685B8B10B356C1000C4CE3 /* StationIdCodeFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

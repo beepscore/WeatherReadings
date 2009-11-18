@@ -18,7 +18,7 @@
 @implementation StationIdCodeFormatter
 
 #pragma mark Formatter methods
-// Ref Hillegass pg 328
+// Ref Hillegass pg 328-334
 // The view control sends this message to formatter
 // Formatter converts string to an object
 - (BOOL) getObjectValue:(id *)anObject
@@ -64,10 +64,17 @@
         return nil;
     }
     
-    NSString *formattedString = [[[NSMutableString alloc] initWithString:unformattedString] autorelease];
+    NSString *formattedString = [[[NSMutableString alloc] initWithString:@""] autorelease];
     
-    // TODO:  Remove all non-alpha characters
+    // Remove all non-alpha characters
     // Ref http://stackoverflow.com/questions/1129521/remove-all-but-numbers-from-nsstring
+    for (int i=0; i<[unformattedString length]; i++) {
+        if (isalpha([unformattedString characterAtIndex:i])) {
+            NSString *tempString = [NSString stringWithFormat:@"%c",
+                                    [unformattedString characterAtIndex:i]];
+            formattedString = [formattedString stringByAppendingString:tempString];
+        }
+    }    
     
     // Cut string to maximum length 4
     if ([formattedString length] > 4 ) {

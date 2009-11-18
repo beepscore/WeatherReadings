@@ -26,8 +26,14 @@
 - (void)addObservationsObject:(Observation *)value;
 - (void)removeObservationsObject:(Observation *)value;
 
+// TODO: Hal has these, but for plural- Observations
 //- (void)addObservation:(NSSet *)value;
 //- (void)removeObservation:(NSSet *)value;
+
+- (IBAction)updateCurrentConditions:(id)sender;
+
+- (NSString *)URLStringForWeatherUndergroundConditions;
+- (NSURL *)URLForWeatherUndergroundConditions;
 
 @end
 

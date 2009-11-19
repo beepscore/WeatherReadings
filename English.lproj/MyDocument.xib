@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="6"/>
+			<integer value="100325"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2380,6 +2380,8 @@
 						<characters key="NS.bytes">@count</characters>
 					</object>
 					<string>@min</string>
+					<string>obsTime</string>
+					<string>observationTime</string>
 				</object>
 				<bool key="NSEditable">YES</bool>
 				<bool key="NSAutomaticallyPreparesContent">YES</bool>
@@ -2399,6 +2401,8 @@
 					<string>time</string>
 					<string>temperature</string>
 					<string>station</string>
+					<string>obsTime</string>
+					<string>observationTime</string>
 				</object>
 				<bool key="NSEditable">YES</bool>
 				<bool key="NSAutomaticallyPreparesContent">YES</bool>
@@ -2438,6 +2442,8 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>time</string>
 					<string>temperature</string>
+					<string>obsTime</string>
+					<string>observationTime</string>
 				</object>
 				<bool key="NSEditable">YES</bool>
 				<bool key="NSAutomaticallyPreparesContent">YES</bool>
@@ -2931,22 +2937,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.time</string>
-						<reference key="source" ref="753353362"/>
-						<reference key="destination" ref="277618176"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="753353362"/>
-							<reference key="NSDestination" ref="277618176"/>
-							<string key="NSLabel">value: arrangedObjects.time</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.time</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">100437</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: arrangedObjects.temperature</string>
 						<reference key="source" ref="647067258"/>
 						<reference key="destination" ref="277618176"/>
@@ -3225,22 +3215,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.time</string>
-						<reference key="source" ref="16371631"/>
-						<reference key="destination" ref="763100274"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="16371631"/>
-							<reference key="NSDestination" ref="763100274"/>
-							<string key="NSLabel">value: arrangedObjects.time</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.time</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">100582</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: arrangedObjects.temperature</string>
 						<reference key="source" ref="1026729602"/>
 						<reference key="destination" ref="763100274"/>
@@ -3286,22 +3260,6 @@
 						</object>
 					</object>
 					<int key="connectionID">100614</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: arrangedObjects.time</string>
-						<reference key="source" ref="530216690"/>
-						<reference key="destination" ref="386024360"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="530216690"/>
-							<reference key="NSDestination" ref="386024360"/>
-							<string key="NSLabel">value: arrangedObjects.time</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">arrangedObjects.time</string>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">100628</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -3576,26 +3534,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">value: selection.time</string>
-						<reference key="source" ref="809817508"/>
-						<reference key="destination" ref="277618176"/>
-						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="809817508"/>
-							<reference key="NSDestination" ref="277618176"/>
-							<string key="NSLabel">value: selection.time</string>
-							<string key="NSBinding">value</string>
-							<string key="NSKeyPath">selection.time</string>
-							<object class="NSDictionary" key="NSOptions">
-								<string key="NS.key.0">NSNoSelectionPlaceholder</string>
-								<string key="NS.object.0">now</string>
-							</object>
-							<int key="NSNibBindingConnectorVersion">2</int>
-						</object>
-					</object>
-					<int key="connectionID">100777</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBBindingConnection" key="connection">
 						<string key="label">target: selection</string>
 						<reference key="source" ref="462968313"/>
 						<reference key="destination" ref="968170133"/>
@@ -3613,6 +3551,74 @@
 						</object>
 					</object>
 					<int key="connectionID">100783</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.observationTime</string>
+						<reference key="source" ref="530216690"/>
+						<reference key="destination" ref="386024360"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="530216690"/>
+							<reference key="NSDestination" ref="386024360"/>
+							<string key="NSLabel">value: arrangedObjects.observationTime</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.observationTime</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100788</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.observationTime</string>
+						<reference key="source" ref="753353362"/>
+						<reference key="destination" ref="277618176"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="753353362"/>
+							<reference key="NSDestination" ref="277618176"/>
+							<string key="NSLabel">value: arrangedObjects.observationTime</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.observationTime</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100789</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: selection.observationTime</string>
+						<reference key="source" ref="809817508"/>
+						<reference key="destination" ref="277618176"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="809817508"/>
+							<reference key="NSDestination" ref="277618176"/>
+							<string key="NSLabel">value: selection.observationTime</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">selection.observationTime</string>
+							<object class="NSDictionary" key="NSOptions">
+								<string key="NS.key.0">NSNoSelectionPlaceholder</string>
+								<string key="NS.object.0">now</string>
+							</object>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100790</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">value: arrangedObjects.observationTime</string>
+						<reference key="source" ref="16371631"/>
+						<reference key="destination" ref="763100274"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="16371631"/>
+							<reference key="NSDestination" ref="763100274"/>
+							<string key="NSLabel">value: arrangedObjects.observationTime</string>
+							<string key="NSBinding">value</string>
+							<string key="NSKeyPath">arrangedObjects.observationTime</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">100791</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -5113,7 +5119,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100783</int>
+			<int key="maxID">100791</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

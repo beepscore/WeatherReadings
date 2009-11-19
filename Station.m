@@ -27,7 +27,7 @@
 // Ref Hillegass Ch 30 pg 369
 - (void)addObservationsObject:(Observation *)value {
     DLog(@"Station %@ adding observation %@",
-         [self name], [value time]);
+         [self name], [value observationTime]);
     
     NSSet *aSet = [NSSet setWithObject:value];
     [self willChangeValueForKey:BSObservationsKey
@@ -41,7 +41,7 @@
 
 - (void)removeObservationsObject:(Observation *)value {
     DLog(@"Station %@ removing observation %@",
-         [self name], [value time]);
+         [self name], [value observationTime]);
 
     NSSet *aSet = [NSSet setWithObject:value];
     [self willChangeValueForKey:BSObservationsKey
@@ -53,7 +53,7 @@
                   usingObjects:aSet];
 }
 
-// Method from Hal
+// Methods from Hal
 - (NSString *)URLStringForWeatherUndergroundConditions {
     return [NSString
             stringWithFormat:@"http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query=%@",
@@ -91,11 +91,11 @@
     NSLog(@"%@ %f", timeElement.stringValue, timeElement.stringValue.doubleValue);
     NSDate *timeObserved = [NSDate dateWithTimeIntervalSince1970:timeElement.stringValue.doubleValue];
     NSLog(@"%@", timeObserved);
-    newObservation.time = timeObserved;
+    newObservation.observationTime = timeObserved;
     
     newObservation.station = self;
     
-    // TODO:  SB added to remove memory leak
+    // SB added to remove memory leak
     [xmlDoc release];
 }
 

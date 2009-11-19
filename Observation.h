@@ -13,7 +13,7 @@
 {
 }
 
-@property (nonatomic, retain) NSDate * time;
+@property (nonatomic, retain) NSDate * observationTime;
 @property (nonatomic, retain) NSNumber * temperature;
 @property (nonatomic, retain) Station * station;
 

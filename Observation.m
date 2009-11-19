@@ -11,7 +11,7 @@
 
 @implementation Observation 
 
-@dynamic time;
+@dynamic observationTime;
 @dynamic temperature;
 @dynamic station;
 

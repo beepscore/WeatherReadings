@@ -55,11 +55,8 @@
 
 // Method from Hal
 - (NSString *)URLStringForWeatherUndergroundConditions {
-//    return [NSString
-//            stringWithFormat:@"http://api.wunderground.com/auto/wui/geo/WXCurrentObjXML/index.xml?query=%@",
-//            self.idCode];
     return [NSString
-            stringWithFormat:@"http://api.wunderground.com/weatherstation/WXCurrentObXML.asp?ID=%@",
+            stringWithFormat:@"http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query=%@",
             self.idCode];
 }
 

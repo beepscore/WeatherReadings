@@ -56,8 +56,7 @@
 // Methods from Hal
 - (NSString *)URLStringForWeatherUndergroundConditions {
     return [NSString
-            stringWithFormat:@"http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query=%@",
-            self.idCode];
+            stringWithFormat:@"%@%@", BSWUObservationString, self.idCode];
 }
 
 - (NSURL *)URLForWeatherUndergroundConditions {

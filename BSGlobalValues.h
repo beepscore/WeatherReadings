@@ -12,7 +12,10 @@
 // #define MAX_COUNT (100)
 
 extern NSString * const BSObservationsKey;
-//extern NSString * const BSIdCodeKey;
+
+// Weather Underground API http://wiki.wunderground.com/index.php/API_-_XML
+extern NSString * const BSWUForecastString;
+extern NSString * const BSWUObservationString;
 
 #pragma mark -
 // Ref http://iphoneincubator.com/blog/debugging/the-evolution-of-a-replacement-for-nslog

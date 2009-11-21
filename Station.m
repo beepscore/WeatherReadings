@@ -64,8 +64,8 @@
 }
 
 - (void)updateCurrentConditions:(id)sender {
-    NSLog(@"updateCurrentConditions %@", self);
-    NSLog(@"%@", self.URLStringForWeatherUndergroundConditions);
+    DLog(@"updateCurrentConditions %@", self);
+    DLog(@"%@", self.URLStringForWeatherUndergroundConditions);
     
     NSError *error;
     NSXMLDocument *xmlDoc = 
@@ -73,9 +73,9 @@
                                          options:0
                                            error:&error];
     
-    NSLog(@"%@", xmlDoc);
-    NSLog(@"%@", [[xmlDoc rootElement] elementsForName:@"observation_time"]);
-    NSLog(@"%@ %@", [[xmlDoc rootElement] elementsForName:@"temp_f"],
+    DLog(@"%@", xmlDoc);
+    DLog(@"%@", [[xmlDoc rootElement] elementsForName:@"observation_time"]);
+    DLog(@"%@ %@", [[xmlDoc rootElement] elementsForName:@"temp_f"],
           [[xmlDoc rootElement] elementsForName:@"observation_epoch"]);
     
     Observation *newObservation =
@@ -87,9 +87,9 @@
     
     NSXMLElement *timeElement = 
     [[[xmlDoc rootElement] elementsForName:@"observation_epoch"] objectAtIndex:0];
-    NSLog(@"%@ %f", timeElement.stringValue, timeElement.stringValue.doubleValue);
+    DLog(@"%@ %f", timeElement.stringValue, timeElement.stringValue.doubleValue);
     NSDate *timeObserved = [NSDate dateWithTimeIntervalSince1970:timeElement.stringValue.doubleValue];
-    NSLog(@"%@", timeObserved);
+    DLog(@"%@", timeObserved);
     newObservation.observationTime = timeObserved;
     
     newObservation.station = self;

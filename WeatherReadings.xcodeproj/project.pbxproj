@@ -20,6 +20,7 @@
 		DE73021510AB8A2100623614 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE73021410AB8A2100623614 /* Observation.m */; };
 		DE79595C10AB790D00416C7F /* BSGlobalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = DE79595B10AB790D00416C7F /* BSGlobalValues.m */; };
 		DEAC153A10BC64A900E3778E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAC153910BC64A900E3778E /* WebKit.framework */; };
+		DEBAFDA610BC697C005DDEF7 /* BSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEBAFDA510BC697C005DDEF7 /* BSWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,8 @@
 		DE79595A10AB790D00416C7F /* BSGlobalValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGlobalValues.h; sourceTree = "<group>"; };
 		DE79595B10AB790D00416C7F /* BSGlobalValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGlobalValues.m; sourceTree = "<group>"; };
 		DEAC153910BC64A900E3778E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		DEBAFDA410BC697C005DDEF7 /* BSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSWebViewController.h; sourceTree = "<group>"; };
+		DEBAFDA510BC697C005DDEF7 /* BSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 		2A37F4ABFDCFA73011CA2CEA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DEBAFDA410BC697C005DDEF7 /* BSWebViewController.h */,
+				DEBAFDA510BC697C005DDEF7 /* BSWebViewController.m */,
 				DE79595A10AB790D00416C7F /* BSGlobalValues.h */,
 				DE79595B10AB790D00416C7F /* BSGlobalValues.m */,
 				2A37F4AEFDCFA73011CA2CEA /* MyDocument.h */,
@@ -229,6 +234,7 @@
 				DE73021010AB89D100623614 /* Station.m in Sources */,
 				DE73021510AB8A2100623614 /* Observation.m in Sources */,
 				DE685B8B10B356C1000C4CE3 /* StationIdCodeFormatter.m in Sources */,
+				DEBAFDA610BC697C005DDEF7 /* BSWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

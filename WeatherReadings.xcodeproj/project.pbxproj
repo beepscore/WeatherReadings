@@ -19,6 +19,7 @@
 		DE73021010AB89D100623614 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = DE73020F10AB89D100623614 /* Station.m */; };
 		DE73021510AB8A2100623614 /* Observation.m in Sources */ = {isa = PBXBuildFile; fileRef = DE73021410AB8A2100623614 /* Observation.m */; };
 		DE79595C10AB790D00416C7F /* BSGlobalValues.m in Sources */ = {isa = PBXBuildFile; fileRef = DE79595B10AB790D00416C7F /* BSGlobalValues.m */; };
+		DEAC153A10BC64A900E3778E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEAC153910BC64A900E3778E /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		DE73021410AB8A2100623614 /* Observation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Observation.m; sourceTree = "<group>"; };
 		DE79595A10AB790D00416C7F /* BSGlobalValues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSGlobalValues.h; sourceTree = "<group>"; };
 		DE79595B10AB790D00416C7F /* BSGlobalValues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSGlobalValues.m; sourceTree = "<group>"; };
+		DEAC153910BC64A900E3778E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				775DFF38067A968500C5B868 /* Cocoa.framework in Frameworks */,
+				DEAC153A10BC64A900E3778E /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A7FEA54F5311CA2CBB /* Cocoa.framework */,
+				DEAC153910BC64A900E3778E /* WebKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";

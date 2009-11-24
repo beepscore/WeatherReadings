@@ -1964,7 +1964,7 @@
 											<object class="NSTextField" id="1031393445">
 												<reference key="NSNextResponder" ref="937632438"/>
 												<int key="NSvFlags">268</int>
-												<string key="NSFrame">{{215, 543}, {38, 17}}</string>
+												<string key="NSFrame">{{215, 539}, {38, 17}}</string>
 												<reference key="NSSuperview" ref="937632438"/>
 												<bool key="NSEnabled">YES</bool>
 												<object class="NSTextFieldCell" key="NSCell" id="901108355">
@@ -2074,6 +2074,26 @@
 												</object>
 												<bool key="UseBackForwardList">YES</bool>
 												<bool key="AllowsUndo">YES</bool>
+											</object>
+											<object class="NSButton" id="63513442">
+												<reference key="NSNextResponder" ref="937632438"/>
+												<int key="NSvFlags">268</int>
+												<string key="NSFrame">{{313, 542}, {114, 32}}</string>
+												<reference key="NSSuperview" ref="937632438"/>
+												<bool key="NSEnabled">YES</bool>
+												<object class="NSButtonCell" key="NSCell" id="787719680">
+													<int key="NSCellFlags">67239424</int>
+													<int key="NSCellFlags2">134217728</int>
+													<string key="NSContents">Reload Map</string>
+													<reference key="NSSupport" ref="643887303"/>
+													<reference key="NSControlView" ref="63513442"/>
+													<int key="NSButtonFlags">-2038284033</int>
+													<int key="NSButtonFlags2">129</int>
+													<string key="NSAlternateContents"/>
+													<string key="NSKeyEquivalent"/>
+													<int key="NSPeriodicDelay">200</int>
+													<int key="NSPeriodicInterval">25</int>
+												</object>
 											</object>
 										</object>
 										<string key="NSFrame">{{10, 33}, {462, 640}}</string>
@@ -3332,6 +3352,14 @@
 					</object>
 					<int key="connectionID">100796</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">reloadMap:</string>
+						<reference key="source" ref="224526521"/>
+						<reference key="destination" ref="63513442"/>
+					</object>
+					<int key="connectionID">100799</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -3429,6 +3457,7 @@
 							<reference ref="1073605997"/>
 							<reference ref="114741411"/>
 							<reference ref="677153866"/>
+							<reference ref="63513442"/>
 						</object>
 						<reference key="parent" ref="159518155"/>
 					</object>
@@ -4384,6 +4413,20 @@
 						<reference key="object" ref="224526521"/>
 						<reference key="parent" ref="0"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100797</int>
+						<reference key="object" ref="63513442"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="787719680"/>
+						</object>
+						<reference key="parent" ref="937632438"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100798</int>
+						<reference key="object" ref="787719680"/>
+						<reference key="parent" ref="63513442"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -4524,7 +4567,8 @@
 					<string>100779.IBPluginDependency</string>
 					<string>100792.IBPluginDependency</string>
 					<string>100793.IBPluginDependency</string>
-					<string>100795.IBPluginDependency</string>
+					<string>100797.IBPluginDependency</string>
+					<string>100798.IBPluginDependency</string>
 					<string>5.IBEditorWindowLastContentRect</string>
 					<string>5.IBPluginDependency</string>
 					<string>5.IBWindowTemplateEditedContentRect</string>
@@ -4671,6 +4715,7 @@
 					<string>com.apple.WebKitIBPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{386, 155}, {524, 701}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{386, 155}, {524, 701}}</string>
@@ -4697,7 +4742,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">100796</int>
+			<int key="maxID">100799</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -4705,6 +4750,10 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">BSWebViewController</string>
 					<string key="superclassName">NSView</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">reloadMap:</string>
+						<string key="NS.object.0">id</string>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">myWebView</string>
 						<string key="NS.object.0">WebView</string>

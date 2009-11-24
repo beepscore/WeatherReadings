@@ -14,4 +14,6 @@
     IBOutlet WebView *myWebView;
 }
 
+- (IBAction)reloadMap:(id)sender;
+
 @end

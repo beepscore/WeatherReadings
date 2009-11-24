@@ -51,4 +51,9 @@
     [super dealloc];
 }
 
+- (IBAction)reloadMap:(id)sender {
+    [myWebView setMainFrameURL: @"http://www.openstreetmap.org/?lat=37.61999893&lon=-122.37000275&zoom=12"];   
+}
+
+
 @end

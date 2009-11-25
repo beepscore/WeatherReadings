@@ -12,3 +12,5 @@ NSString * const BSObservationsKey = @"observations";
 NSString * const BSWUForecastString = @"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=";
 NSString * const BSWUObservationString = 
 @"http://api.wunderground.com/auto/wui/geo/WXCurrentObXML/index.xml?query=";
+NSString * const BSWULocationString = 
+@"http://api.wunderground.com/auto/wui/geo/GeoLookupXML/index.xml?query=";

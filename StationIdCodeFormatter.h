@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 // Ref Hillegass Ch 26 pg 328-334
+// Ref http://www.rap.ucar.edu/weather/surface/stations.txt
 @interface StationIdCodeFormatter : NSFormatter {
 
 }

@@ -16,6 +16,7 @@ extern NSString * const BSObservationsKey;
 // Weather Underground API http://wiki.wunderground.com/index.php/API_-_XML
 extern NSString * const BSWUForecastString;
 extern NSString * const BSWUObservationString;
+extern NSString * const BSWULocationString;
 
 #pragma mark -
 // Ref http://iphoneincubator.com/blog/debugging/the-evolution-of-a-replacement-for-nslog

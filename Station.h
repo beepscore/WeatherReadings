@@ -13,10 +13,10 @@
 {
 }
 
-@property (nonatomic, retain) NSNumber * latitude;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSString * idCode;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSNumber * latitude;
+@property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSSet* observations;
 
 @end
@@ -31,9 +31,13 @@
 //- (void)removeObservation:(NSSet *)value;
 
 - (IBAction)updateCurrentConditions:(id)sender;
+- (void)populateStationAttributes;
+
 
 - (NSString *)URLStringForWeatherUndergroundConditions;
 - (NSURL *)URLForWeatherUndergroundConditions;
+- (NSString *)URLStringForWeatherUndergroundLocation;
+- (NSURL *)URLForWeatherUndergroundLocation;
 
 @end
 

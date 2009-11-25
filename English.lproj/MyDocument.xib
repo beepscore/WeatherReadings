@@ -21,7 +21,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="100085"/>
+			<integer value="100460"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -73,7 +73,7 @@
 								<object class="NSTabViewItem" id="709250957">
 									<string key="NSIdentifier">byStation</string>
 									<object class="NSView" key="NSView" id="674115943">
-										<reference key="NSNextResponder" ref="943754556"/>
+										<nil key="NSNextResponder"/>
 										<int key="NSvFlags">288</int>
 										<object class="NSMutableArray" key="NSSubviews">
 											<bool key="EncodedWithXMLCoder">YES</bool>
@@ -1231,7 +1231,6 @@
 											</object>
 										</object>
 										<string key="NSFrame">{{10, 33}, {462, 640}}</string>
-										<reference key="NSSuperview" ref="943754556"/>
 									</object>
 									<string key="NSLabel">By station</string>
 									<reference key="NSColor" ref="528405313"/>
@@ -1886,7 +1885,7 @@
 								<object class="NSTabViewItem" id="159518155">
 									<string key="NSIdentifier">byStation2</string>
 									<object class="NSView" key="NSView" id="937632438">
-										<nil key="NSNextResponder"/>
+										<reference key="NSNextResponder" ref="943754556"/>
 										<int key="NSvFlags">256</int>
 										<object class="NSMutableArray" key="NSSubviews">
 											<bool key="EncodedWithXMLCoder">YES</bool>
@@ -2098,20 +2097,21 @@
 											</object>
 										</object>
 										<string key="NSFrame">{{10, 33}, {462, 640}}</string>
+										<reference key="NSSuperview" ref="943754556"/>
 									</object>
 									<string key="NSLabel">Map</string>
 									<reference key="NSColor" ref="528405313"/>
 									<reference key="NSTabView" ref="943754556"/>
 								</object>
 							</object>
-							<reference key="NSSelectedTabViewItem" ref="709250957"/>
+							<reference key="NSSelectedTabViewItem" ref="159518155"/>
 							<reference key="NSFont" ref="643887303"/>
 							<int key="NSTvFlags">0</int>
 							<bool key="NSAllowTruncatedLabels">YES</bool>
 							<bool key="NSDrawsBackground">YES</bool>
 							<object class="NSMutableArray" key="NSSubviews">
 								<bool key="EncodedWithXMLCoder">YES</bool>
-								<reference ref="674115943"/>
+								<reference ref="937632438"/>
 							</object>
 						</object>
 					</object>
@@ -3444,7 +3444,7 @@
 							<reference ref="937632438"/>
 						</object>
 						<reference key="parent" ref="943754556"/>
-						<string key="objectName">Tab View byStation2</string>
+						<string key="objectName">Tab View Map</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100460</int>
@@ -4716,9 +4716,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{386, 155}, {524, 701}}</string>
+					<string>{{404, -211}, {524, 701}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{386, 155}, {524, 701}}</string>
+					<string>{{404, -211}, {524, 701}}</string>
 					<integer value="1"/>
 					<integer value="1"/>
 					<string>{131.131, 86}</string>

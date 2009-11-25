@@ -19,25 +19,19 @@
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSSet* observations;
 
-@end
+- (void)populateStationAttributes;
 
+- (NSString *)URLStringForWeatherUndergroundLocation;
+- (NSURL *)URLForWeatherUndergroundLocation;
+- (NSString *)URLStringForWeatherUndergroundConditions;
+- (NSURL *)URLForWeatherUndergroundConditions;
+
+- (IBAction)updateCurrentConditions:(id)sender;
+
+@end
 
 @interface Station (CoreDataGeneratedAccessors)
 - (void)addObservationsObject:(Observation *)value;
 - (void)removeObservationsObject:(Observation *)value;
-
-// TODO: Hal has these, but for plural- Observations
-//- (void)addObservation:(NSSet *)value;
-//- (void)removeObservation:(NSSet *)value;
-
-- (IBAction)updateCurrentConditions:(id)sender;
-- (void)populateStationAttributes;
-
-
-- (NSString *)URLStringForWeatherUndergroundConditions;
-- (NSURL *)URLForWeatherUndergroundConditions;
-- (NSString *)URLStringForWeatherUndergroundLocation;
-- (NSURL *)URLForWeatherUndergroundLocation;
-
 @end
 

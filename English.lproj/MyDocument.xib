@@ -4716,9 +4716,9 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{404, -211}, {524, 701}}</string>
+					<string>{{404, 0}, {524, 701}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{404, -211}, {524, 701}}</string>
+					<string>{{404, 0}, {524, 701}}</string>
 					<integer value="1"/>
 					<integer value="1"/>
 					<string>{131.131, 86}</string>

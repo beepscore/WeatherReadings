@@ -9,7 +9,6 @@
 #import "BSWebViewController.h"
 #import <WebKit/WebKit.h>
 
-
 @implementation BSWebViewController
 
 #pragma mark Methods Xcode generated for NSView

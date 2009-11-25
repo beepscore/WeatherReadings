@@ -10,20 +10,90 @@
 #import "Observation.h"
 #import "BSGlobalValues.h"
 
-
 @implementation Station 
 
-@synthesize idCode;
+#pragma mark Accessors
+// replaced @dynamic with @synthesize to override setIdCode
 // @dynamic idCode;
+@synthesize idCode;
+
 @dynamic name;
 @dynamic latitude;
 @dynamic longitude;
 @dynamic observations;
 
+
+- (void)setIdCode:(NSString *)anIdCode {
+    
+    if ( idCode == anIdCode)
+        return;
+    
+    // increment retain count on the object 'anIdCode' points to.  See Hillegass pg 69
+    [anIdCode retain];
+    
+    [idCode release];
+    
+    // point 'idCode' to the same object as 'anIdCode'
+    idCode = anIdCode;
+    
+    [self populateStationAttributes];    
+}
+
+- (void)populateStationAttributes {
+    DLog(@"populateStationAttributes %@", self);
+    DLog(@"%@", self.URLStringForWeatherUndergroundLocation);
+    
+    NSError *error;
+    NSXMLDocument *xmlDoc = 
+    [[NSXMLDocument alloc] initWithContentsOfURL:self.URLForWeatherUndergroundLocation
+                                         options:0
+                                           error:&error];
+    
+    DLog(@"%@", xmlDoc);
+    
+    self.name = [[[[xmlDoc rootElement] elementsForName:@"city"] objectAtIndex:0] stringValue];
+    
+    NSXMLElement *latitudeElement = 
+    [[[xmlDoc rootElement] elementsForName:@"lat"] objectAtIndex:0];
+    self.latitude = [NSNumber numberWithFloat:latitudeElement.stringValue.floatValue];
+    
+    NSXMLElement *longitudeElement = 
+    [[[xmlDoc rootElement] elementsForName:@"lon"] objectAtIndex:0];
+    self.longitude = [NSNumber numberWithFloat:longitudeElement.stringValue.floatValue];
+    
+    DLog(@"%@ %@ %@ %@", self.idCode, self.name, self.latitude, self.longitude);    
+    
+    // SB added to remove memory leak
+    [xmlDoc release];    
+}
+#pragma mark -
+
+#pragma mark URL Methods
+- (NSString *)URLStringForWeatherUndergroundLocation {
+    return [NSString
+            stringWithFormat:@"%@%@", BSWULocationString, self.idCode];
+}
+
+- (NSURL *)URLForWeatherUndergroundLocation {
+    return [NSURL URLWithString:self.URLStringForWeatherUndergroundLocation];
+}
+
+- (NSString *)URLStringForWeatherUndergroundConditions {
+    return [NSString
+            stringWithFormat:@"%@%@", BSWUObservationString, self.idCode];
+}
+
+- (NSURL *)URLForWeatherUndergroundConditions {
+    return [NSURL URLWithString:self.URLStringForWeatherUndergroundConditions];
+}
+
+#pragma mark -
+
 // TODO: override keyPathsForValuesAffectingName similar to Hillegass pg 368?
 //+ (NSSet *)keyPathsForValuesAffectingName {
 //    return [NSSet setWithObjects:BSIdCodeKey];
 //}
+
 
 // Ref Hillegass Ch 30 pg 369
 - (void)addObservationsObject:(Observation *)value {
@@ -52,25 +122,6 @@
     [self didChangeValueForKey:BSObservationsKey
                withSetMutation:NSKeyValueMinusSetMutation
                   usingObjects:aSet];
-}
-
-// Methods from Hal
-- (NSString *)URLStringForWeatherUndergroundConditions {
-    return [NSString
-            stringWithFormat:@"%@%@", BSWUObservationString, self.idCode];
-}
-
-- (NSURL *)URLForWeatherUndergroundConditions {
-    return [NSURL URLWithString:self.URLStringForWeatherUndergroundConditions];
-}
-
-- (NSString *)URLStringForWeatherUndergroundLocation {
-    return [NSString
-            stringWithFormat:@"%@%@", BSWULocationString, self.idCode];
-}
-
-- (NSURL *)URLForWeatherUndergroundLocation {
-    return [NSURL URLWithString:self.URLStringForWeatherUndergroundLocation];
 }
 
 
@@ -109,50 +160,6 @@
     [xmlDoc release];
 }
 
-- (void)setIdCode:(NSString *)anIdCode {
-
-    if ( idCode == anIdCode)
-        return;
-    
-    // increment retain count on the object 'anIdCode' points to.  See Hillegass pg 69
-    [anIdCode retain];
-    
-    [idCode release];
-    
-    // point 'idCode' to the same object as 'anIdCode'
-    idCode = anIdCode;
-    
-    [self populateStationAttributes];    
-}
-
-
-- (void)populateStationAttributes {
-    DLog(@"populateStationAttributes %@", self);
-    DLog(@"%@", self.URLStringForWeatherUndergroundLocation);
-    
-    NSError *error;
-    NSXMLDocument *xmlDoc = 
-    [[NSXMLDocument alloc] initWithContentsOfURL:self.URLForWeatherUndergroundLocation
-                                         options:0
-                                           error:&error];
-    
-    DLog(@"%@", xmlDoc);
-    
-    self.name = [[[[xmlDoc rootElement] elementsForName:@"city"] objectAtIndex:0] stringValue];
-    
-    NSXMLElement *latitudeElement = 
-    [[[xmlDoc rootElement] elementsForName:@"lat"] objectAtIndex:0];
-    self.latitude = [NSNumber numberWithFloat:latitudeElement.stringValue.floatValue];
-    
-    NSXMLElement *longitudeElement = 
-    [[[xmlDoc rootElement] elementsForName:@"lon"] objectAtIndex:0];
-    self.longitude = [NSNumber numberWithFloat:longitudeElement.stringValue.floatValue];
-    
-    DLog(@"%@ %@ %@ %@", self.idCode, self.name, self.latitude, self.longitude);    
-    
-    // SB added to remove memory leak
-    [xmlDoc release];    
-}
 
 
 @end

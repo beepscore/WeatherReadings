@@ -17,8 +17,7 @@
 @dynamic station;
 
 
-// From Marc Gottshall
-// To initialize an NSManagedObject, use this method. 
+// Use awakeFromInsert to initialize an NSManagedObject (from Mark Gottshall) 
 - (void) awakeFromInsert {
     
     DLog(@"Setting default observationTime = current time");    

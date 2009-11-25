@@ -52,7 +52,13 @@
 }
 
 - (IBAction)reloadMap:(id)sender {
-    [myWebView setMainFrameURL: @"http://www.openstreetmap.org/?lat=37.61999893&lon=-122.37000275&zoom=12"];   
+    
+    // TODO: use station coordinates
+    NSString *mapURLString = 
+    [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%f&lon=%f&zoom=9",
+     24.55611, -81.75945];
+    [myWebView setMainFrameURL:mapURLString];   
+
 }
 
 

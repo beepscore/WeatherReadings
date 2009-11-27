@@ -12,10 +12,12 @@
 @interface BSWebViewController : NSView {
     
     IBOutlet WebView *myWebView;
-    NSPopUpButton *myPopUpButton;
+    NSTextField * latitudeField;
+    NSTextField * longitudeField;
 }
 
-@property (nonatomic, retain) IBOutlet NSPopUpButton *myPopUpButton;
+@property (nonatomic, retain) IBOutlet NSTextField * latitudeField;
+@property (nonatomic, retain) IBOutlet NSTextField * longitudeField;
 
 - (IBAction)reloadMap:(id)sender;
 

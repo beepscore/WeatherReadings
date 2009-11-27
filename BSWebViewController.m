@@ -12,7 +12,8 @@
 
 @implementation BSWebViewController
 
-@synthesize myPopUpButton;
+@synthesize latitudeField;
+@synthesize longitudeField;
 
 #pragma mark Methods Xcode generated for NSView
 - (id)initWithFrame:(NSRect)frame {
@@ -56,7 +57,7 @@
 - (IBAction)reloadMap:(id)sender {
     
     // TODO: use station coordinates
-    DLog(@"[myPopUpButton selectedItem] = %@", [myPopUpButton selectedItem]);
+    DLog(@"lat %@ lon %@", latitudeField.stringValue, longitudeField.stringValue);
     NSString *mapURLString = 
     [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%f&lon=%f&zoom=9",
      24.55611, -81.75945];

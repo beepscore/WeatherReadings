@@ -9,15 +9,15 @@
 #import <Cocoa/Cocoa.h>
 @class WebView;
 
-@interface BSWebViewController : NSView {
+@interface BSWebViewController : NSView <NSTabViewDelegate> {
     
     IBOutlet WebView *myWebView;
     NSTextField * latitudeField;
     NSTextField * longitudeField;
 }
 
-@property (nonatomic, retain) IBOutlet NSTextField * latitudeField;
-@property (nonatomic, retain) IBOutlet NSTextField * longitudeField;
+@property (assign) IBOutlet NSTextField * latitudeField;
+@property (assign) IBOutlet NSTextField * longitudeField;
 
 - (IBAction)reloadMap:(id)sender;
 

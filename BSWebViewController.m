@@ -26,6 +26,7 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
     // Drawing code here.
+    [self reloadMap:self];
 }
 
 #pragma mark sbMethods
@@ -35,7 +36,7 @@
     // google maps free to use on free web sites.
     // [myWebView setMainFrameURL: @"http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=weather+station+KBFI"];
     
-    // open street map
+    // display open street map
     [myWebView setMainFrameURL: @"http://www.openstreetmap.org/?lat=47.530000&lon=-122.301972&zoom=12"];
 }
 
@@ -56,16 +57,19 @@
 
 - (IBAction)reloadMap:(id)sender {
     
-    // TODO: use station coordinates
     DLog(@"lat %@ lon %@", latitudeField.stringValue, longitudeField.stringValue);
 //  NSString *mapURLString = 
 //    [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%f&lon=%f&zoom=9",
 //     24.55611, -81.75945];
     NSString *mapURLString = 
-      [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%@&lon=%@&zoom=9",
+      [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%@&lon=%@&zoom=12",
       latitudeField.stringValue, longitudeField.stringValue];
     [myWebView setMainFrameURL:mapURLString];   
+}
 
+#pragma mark NSTabViewDelegate methods
+- (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem {
+    [self reloadMap:self];
 }
 
 

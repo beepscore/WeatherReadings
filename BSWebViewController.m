@@ -54,7 +54,7 @@
     [super dealloc];
 }
 
-- (IBAction)reloadMap:(id)sender {
+- (void)reloadMap{
     
     DLog(@"latitude %@ longitude %@", latitudeField.stringValue, longitudeField.stringValue);
     NSString *mapURLString = 
@@ -65,7 +65,7 @@
 
 #pragma mark NSTabViewDelegate methods
 - (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem {
-    [self reloadMap:self];
+    [self reloadMap];
 }
 
 

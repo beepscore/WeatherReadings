@@ -19,6 +19,6 @@
 @property (assign) IBOutlet NSTextField * latitudeField;
 @property (assign) IBOutlet NSTextField * longitudeField;
 
-- (IBAction)reloadMap:(id)sender;
+- (void)reloadMap;
 
 @end

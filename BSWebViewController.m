@@ -8,8 +8,11 @@
 
 #import "BSWebViewController.h"
 #import <WebKit/WebKit.h>
+#import "BSGlobalValues.h"
 
 @implementation BSWebViewController
+
+@synthesize myPopUpButton;
 
 #pragma mark Methods Xcode generated for NSView
 - (id)initWithFrame:(NSRect)frame {
@@ -53,6 +56,7 @@
 - (IBAction)reloadMap:(id)sender {
     
     // TODO: use station coordinates
+    DLog(@"[myPopUpButton selectedItem] = %@", [myPopUpButton selectedItem]);
     NSString *mapURLString = 
     [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%f&lon=%f&zoom=9",
      24.55611, -81.75945];

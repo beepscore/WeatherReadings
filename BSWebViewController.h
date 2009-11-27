@@ -12,7 +12,10 @@
 @interface BSWebViewController : NSView {
     
     IBOutlet WebView *myWebView;
+    NSPopUpButton *myPopUpButton;
 }
+
+@property (nonatomic, retain) IBOutlet NSPopUpButton *myPopUpButton;
 
 - (IBAction)reloadMap:(id)sender;
 

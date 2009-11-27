@@ -14,10 +14,12 @@
     IBOutlet WebView *myWebView;
     NSTextField * latitudeField;
     NSTextField * longitudeField;
+    NSTabView * myTabView;
 }
 
-@property (assign) IBOutlet NSTextField * latitudeField;
-@property (assign) IBOutlet NSTextField * longitudeField;
+@property (assign) IBOutlet NSTextField *latitudeField;
+@property (assign) IBOutlet NSTextField *longitudeField;
+@property (assign) IBOutlet NSTabView *myTabView;
 
 - (void)reloadMap;
 

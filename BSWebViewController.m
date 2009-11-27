@@ -14,6 +14,7 @@
 
 @synthesize latitudeField;
 @synthesize longitudeField;
+@synthesize myTabView;
 
 #pragma mark Methods Xcode generated for NSView
 - (id)initWithFrame:(NSRect)frame {
@@ -30,13 +31,7 @@
 
 #pragma mark sbMethods
 - (void) awakeFromNib {
-    
-    // Set an initial URL on the web view so we'll have something to display.
-    // google maps free to use on free web sites.
-    // [myWebView setMainFrameURL: @"http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=weather+station+KBFI"];
-    
-    // display open street map
-    [myWebView setMainFrameURL: @"http://www.openstreetmap.org/?lat=47.530000&lon=-122.301972&zoom=12"];
+        [myTabView selectTabViewItemWithIdentifier:@"byStation"];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -54,18 +49,26 @@
     [super dealloc];
 }
 
-- (void)reloadMap{
-    
+- (void)reloadMap {    
     DLog(@"latitude %@ longitude %@", latitudeField.stringValue, longitudeField.stringValue);
     NSString *mapURLString = 
-      [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%@&lon=%@&zoom=12",
+    // google maps free to use on free web sites.
+    // [myWebView setMainFrameURL: @"http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=weather+station+KBFI"];
+    
+    // display open street map
+    // [myWebView setMainFrameURL: @"http://www.openstreetmap.org/?lat=47.530000&lon=-122.301972&zoom=12"];
+    
+      [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%@&lon=%@&zoom=10",
       latitudeField.stringValue, longitudeField.stringValue];
     [myWebView setMainFrameURL:mapURLString];   
 }
 
 #pragma mark NSTabViewDelegate methods
 - (void)tabView:(NSTabView *)tabView didSelectTabViewItem:(NSTabViewItem *)tabViewItem {
-    [self reloadMap];
+    if ([tabViewItem.identifier isEqualToString:@"map"]) {
+        NSLog(@"selected map tab");
+        [self reloadMap];
+    }
 }
 
 

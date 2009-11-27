@@ -58,9 +58,12 @@
     
     // TODO: use station coordinates
     DLog(@"lat %@ lon %@", latitudeField.stringValue, longitudeField.stringValue);
+//  NSString *mapURLString = 
+//    [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%f&lon=%f&zoom=9",
+//     24.55611, -81.75945];
     NSString *mapURLString = 
-    [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%f&lon=%f&zoom=9",
-     24.55611, -81.75945];
+      [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%@&lon=%@&zoom=9",
+      latitudeField.stringValue, longitudeField.stringValue];
     [myWebView setMainFrameURL:mapURLString];   
 
 }

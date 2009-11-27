@@ -21,6 +21,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="100256"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -58,7 +59,7 @@
 				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<string key="NSWindowContentMinSize">{131.131, 86}</string>
 				<object class="NSView" key="NSWindowView" id="317955023">
-					<nil key="NSNextResponder"/>
+					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">18</int>
 					<object class="NSMutableArray" key="NSSubviews">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -193,17 +194,17 @@
 																				<string>,</string>
 																				<real value="90"/>
 																				<real value="-90"/>
-																				<string>-0.00</string>
+																				<string>-0.00000</string>
 																				<string>-∞</string>
 																				<string/>
-																				<string>0.00</string>
+																				<string>0.00000</string>
 																				<string>+∞</string>
 																				<boolean value="NO"/>
 																				<string>0.00</string>
 																			</object>
 																		</object>
-																		<string key="NS.positiveformat">0.00</string>
-																		<string key="NS.negativeformat">-0.00</string>
+																		<string key="NS.positiveformat">0.00000</string>
+																		<string key="NS.negativeformat">-0.00000</string>
 																		<nil key="NS.positiveattrs"/>
 																		<nil key="NS.negativeattrs"/>
 																		<object class="NSAttributedString" key="NS.zero">
@@ -292,17 +293,17 @@
 																				<string>,</string>
 																				<real value="180"/>
 																				<real value="-180"/>
-																				<string>-0.00</string>
+																				<string>-0.00000</string>
 																				<string>-∞</string>
 																				<string/>
-																				<string>0.00</string>
+																				<string>0.00000</string>
 																				<string>+∞</string>
 																				<boolean value="NO"/>
 																				<string>0.00</string>
 																			</object>
 																		</object>
-																		<string key="NS.positiveformat">0.00</string>
-																		<string key="NS.negativeformat">-0.00</string>
+																		<string key="NS.positiveformat">0.00000</string>
+																		<string key="NS.negativeformat">-0.00000</string>
 																		<nil key="NS.positiveattrs"/>
 																		<nil key="NS.negativeattrs"/>
 																		<object class="NSAttributedString" key="NS.zero">
@@ -2115,6 +2116,7 @@
 						</object>
 					</object>
 					<string key="NSFrameSize">{524, 701}</string>
+					<reference key="NSSuperview"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1280, 832}}</string>
 				<string key="NSMinSize">{131.131, 108}</string>

@@ -19,6 +19,10 @@
 @property (nonatomic, retain) NSNumber * longitude;
 @property (nonatomic, retain) NSSet* observations;
 
+// in IB, progress indicators bind to these flags
+@property (assign) BOOL isImportingStation;
+@property (assign) BOOL isImportingObservation;
+
 - (void)populateStationAttributes;
 
 - (NSString *)URLStringForWeatherUndergroundLocation;

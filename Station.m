@@ -14,7 +14,6 @@
 
 #pragma mark Accessors
 // replaced @dynamic with @synthesize to override setIdCode
-// @dynamic idCode;
 @synthesize idCode;
 
 @dynamic name;
@@ -22,6 +21,17 @@
 @dynamic longitude;
 @dynamic observations;
 
+@synthesize isImportingStation;
+@synthesize isImportingObservation;
+
+// init
+- (id)init {
+    if (self = [super init]) {
+        [self setIsImportingStation:NO];
+        [self setIsImportingObservation:NO];
+    }
+    return self;
+}
 
 - (void)setIdCode:(NSString *)anIdCode {
     
@@ -43,12 +53,14 @@
     DLog(@"populateStationAttributes %@", self);
     DLog(@"%@", self.URLStringForWeatherUndergroundLocation);
     
+    [self setIsImportingStation:YES];    
     NSError *error;
     NSXMLDocument *xmlDoc = 
     [[NSXMLDocument alloc] initWithContentsOfURL:self.URLForWeatherUndergroundLocation
                                          options:0
                                            error:&error];
     
+    [self setIsImportingStation:NO];
     DLog(@"%@", xmlDoc);
     
     self.name = [[[[xmlDoc rootElement] elementsForName:@"city"] objectAtIndex:0] stringValue];
@@ -88,13 +100,6 @@
 }
 
 #pragma mark -
-
-// TODO: override keyPathsForValuesAffectingName similar to Hillegass pg 368?
-//+ (NSSet *)keyPathsForValuesAffectingName {
-//    return [NSSet setWithObjects:BSIdCodeKey];
-//}
-
-
 // Ref Hillegass Ch 30 pg 369
 - (void)addObservationsObject:(Observation *)value {
     DLog(@"Station %@ adding observation %@",
@@ -129,11 +134,13 @@
     DLog(@"updateCurrentConditions %@", self);
     DLog(@"%@", self.URLStringForWeatherUndergroundConditions);
     
+    [self setIsImportingObservation:YES];
     NSError *error;
     NSXMLDocument *xmlDoc = 
     [[NSXMLDocument alloc] initWithContentsOfURL:self.URLForWeatherUndergroundConditions
                                          options:0
                                            error:&error];
+    [self setIsImportingObservation:NO];
     
     DLog(@"%@", xmlDoc);
     DLog(@"%@", [[xmlDoc rootElement] elementsForName:@"observation_time"]);

@@ -15,6 +15,7 @@
 @synthesize latitudeField;
 @synthesize longitudeField;
 @synthesize myTabView;
+@synthesize mapProgressIndicator;
 
 #pragma mark Methods Xcode generated for NSView
 - (id)initWithFrame:(NSRect)frame {
@@ -60,7 +61,9 @@
     
       [NSString stringWithFormat:@"http://www.openstreetmap.org/?lat=%@&lon=%@&zoom=10",
       latitudeField.stringValue, longitudeField.stringValue];
-    [myWebView setMainFrameURL:mapURLString];   
+    [mapProgressIndicator startAnimation:self];
+    [myWebView setMainFrameURL:mapURLString];
+    [mapProgressIndicator stopAnimation:self];
 }
 
 #pragma mark NSTabViewDelegate methods

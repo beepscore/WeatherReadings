@@ -15,11 +15,13 @@
     NSTextField * latitudeField;
     NSTextField * longitudeField;
     NSTabView * myTabView;
+    NSProgressIndicator *mapProgressIndicator;
 }
 
 @property (assign) IBOutlet NSTextField *latitudeField;
 @property (assign) IBOutlet NSTextField *longitudeField;
 @property (assign) IBOutlet NSTabView *myTabView;
+@property (assign) IBOutlet NSProgressIndicator *mapProgressIndicator;
 
 - (void)reloadMap;
 
